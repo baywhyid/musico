@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+what is map method and how does it work
+
+00:00:04.000 --> 00:00:08.000
+The map method is powerfull and wieldsy use function in javascript.
+
+00:00:08.000 --> 00:00:12.000
+It creates a new array based on the original one.
+
+00:00:12.000 --> 00:00:16.000
+Let's start with an example array of numbers.
+
+00:00:16.000 --> 00:00:20.000
+We want to create a new array where each number is doubled.
+
+00:00:20.000 --> 00:00:24.000
+Using the map method, we can loop through each element.
+
+00:00:24.000 --> 00:00:28.000
+For each item, we return a modified value.
+
+00:00:28.000 --> 00:00:32.000
+Here is an example: const numbers = [1, 2, 3];
+
+00:00:32.000 --> 00:00:36.000
+const doubled = numbers.map(num => num * 2);
+
+00:00:36.000 --> 00:00:40.000
+Now, doubled will be [2, 4, 6].
+
+00:00:40.000 --> 00:00:44.000
+Notice that the original array is not changed.
+
+00:00:44.000 --> 00:00:48.000
+The map method always returns a new array.
+
+00:00:48.000 --> 00:00:52.000
+This makes it very useful for functional programming.

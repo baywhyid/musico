@@ -1,0 +1,15 @@
+a:visited {
+  color: brown;
+}
+a:hover {
+  color: red;
+}
+fieldset {
+  border: 2px solid black;
+  padding: 10px;
+  width: 300px;
+}
+.quotes1 {
+  font-style: italic;
+  color: rgb(35, 206, 35);
+}

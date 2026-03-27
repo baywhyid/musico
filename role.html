@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <code>
+            Kategori ARIA roles
+
+Ada enam kategori utama ARIA roles:
+
+Document structure roles
+
+Widget roles
+
+Landmark roles
+
+Live region roles
+
+Window roles
+
+Abstract roles
+
+Document Structure Roles
+
+Role ini mendefinisikan struktur keseluruhan halaman web. Dengan ini, teknologi bantu bisa memahami hubungan antar bagian halaman dan membantu navigasi.
+
+Namun, sebagian besar role ini jarang dipakai sekarang karena HTML modern sudah punya elemen semantik yang setara. Jadi, sebaiknya gunakan elemen HTML semantik jika tersedia.
+
+Gunakan role hanya jika tidak ada elemen HTML yang setara, seperti:
+
+toolbar
+
+tooltip
+
+feed
+
+math
+
+presentation
+
+none
+
+note
+
+Contoh:
+
+&lt;div role="math" aria-label="x squared + y squared = 3"&gt;
+  x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = 3
+&lt;/div&gt;
+
+Di sini juga digunakan atribut aria-label untuk menjelaskan isi elemen.
+
+Widget Roles
+
+Role ini menentukan fungsi dan perilaku elemen interaktif, seperti scrollbar.
+
+Contoh role:
+
+scrollbar
+
+searchbox
+
+separator (jika bisa difokuskan)
+
+slider
+
+spinbutton
+
+switch
+
+tab
+
+tabpanel
+
+treeitem
+
+Contoh searchbox:
+
+&lt;div class="search-container" role="search"&gt;
+  &lt;label for="searchbox" class="visually-hidden"&gt;Search&lt;/label&gt;
+
+  &lt;div
+    id="searchbox"
+    class="searchbox"
+    role="searchbox"
+    aria-label="Search the site"
+    tabindex="0"
+    contenteditable="true"&gt;
+  &lt;/div&gt;
+
+  &lt;button type="button" aria-label="Submit search"&gt;Search&lt;/button&gt;
+&lt;/div&gt;
+
+Beberapa role ini punya elemen HTML yang setara. Jika ada, utamakan elemen HTML tersebut. Misalnya, lebih baik pakai &lt;button&gt; daripada &lt;div role="button"&gt;.
+
+Landmark Roles
+
+Role ini digunakan untuk menandai bagian utama halaman. Screen reader menggunakannya untuk navigasi cepat.
+
+Contoh:
+
+banner
+
+complementary
+
+contentinfo
+
+form
+
+main
+
+navigation
+
+region
+
+search
+
+Semua ini punya padanan HTML:
+
+header
+
+footer
+
+aside
+
+form
+
+main
+
+nav
+
+section
+
+Jika kamu sudah menggunakan elemen HTML yang tepat, tidak perlu menambahkan role lagi.
+
+Contoh:
+
+&lt;div role="banner" class="site-banner"&gt;
+  &lt;h1&gt;Accessible Web Design&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Articles&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;
+
+Live Region Roles
+
+Role ini digunakan untuk elemen yang isinya berubah secara dinamis. Screen reader akan memberitahu pengguna jika ada perubahan.
+
+Contoh:
+
+alert
+
+log
+
+marquee
+
+status
+
+timer
+
+Contoh:
+
+&lt;div class="status-demo"&gt;
+  &lt;button id="update-status-btn"&gt;Check Status&lt;/button&gt;
+  &lt;div id="status-msg" role="status"&gt;
+    No updates yet.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+Saat isi berubah, screen reader akan mengumumkannya.
+
+Window Roles
+
+Role ini digunakan untuk sub-window seperti dialog atau popup.
+
+Contoh:
+
+alertdialog
+
+dialog
+
+Namun sekarang lebih disarankan menggunakan elemen HTML &lt;dialog&gt; daripada membuat sendiri dengan role.
+
+Contoh:
+
+&lt;div id="custom-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"&gt;
+
+Abstract Roles
+
+Role ini hanya digunakan secara internal oleh browser untuk mengatur struktur dokumen.
+
+👉 Developer tidak perlu menggunakannya.
+
+Kesimpulan
+
+Dengan ARIA roles, kamu bisa membuat website dan aplikasi web yang lebih aksesibel.
+
+ARIA memberikan informasi tambahan tentang fungsi dan tujuan elemen HTML, sehingga screen reader dan teknologi bantu bisa membantu pengguna memahami dan menggunakan halaman dengan lebih baik.
+
+👉 Tujuannya: memastikan semua orang bisa mendapatkan pengalaman yang baik saat menggunakan web.
+        </code>
+    </pre>
+
+</body>
+</html>
