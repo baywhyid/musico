@@ -13,3 +13,20 @@ fieldset {
   font-style: italic;
   color: rgb(35, 206, 35);
 }
+.test2 > p {
+  font-style: bold;
+  color: red;
+}
+h1 {
+  text-align: center;
+}
+body {
+  background-color: rgb(32, 32, 32);
+  color: white;}
+  h1 {
+    background-color: rgba(230, 221, 221, 0.444);
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    color: black;
+  }

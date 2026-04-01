@@ -1,2 +1,2 @@
 const btn = document.querySelector("button");
-btn.addEventListener("click", () => alert("You clicked on the alert button"));
+btn.addEventListener("click", () => alert("BISA NIH JS NYA"));

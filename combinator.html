@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Combinator</title>
+</head>
+<body>
+    <h1>Combinator</h1>
+    <p>
+        Combinator adalah simbol yang digunakan untuk menggabungkan dua atau lebih elemen dalam CSS. Contoh: .test2 > p { font-style: bold; color: red; } di mana > adalah child combinator yang hanya akan mempengaruhi elemen p yang merupakan anak langsung dari elemen dengan class test2.
+        pertama ada descendant combinator yang menggunakan spasi untuk menggabungkan elemnt, bisa dibilang css default
+        kedua ada child combinator yang menggunakan &gt; untuk menggabungkan elemnt yang merupakan langsung dari bawahan elemnt tanpa ada bungkusan lain
+        ketiga ada next sibling combinator yang menggunakan + untuk mengincar element siblling setelah element yang ditargetkan
+        keempat ada sub-sequent sibling yang menggunakan (~) untuk menargetkan target dan semua sibling setelahnya contoh .test &lt;h2&gt; ~&lt;p&gt; maka semua h2 dan p setelahnya bakalan kena
+    </p>
+</html>

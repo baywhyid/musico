@@ -8,7 +8,7 @@
         <title>musico free audio player</title>
     </head>
     <body>
-        <h1 tabindex="1" role="title">Musico</h1>
+        <h1>Musico</h1>
         <hr>
         <header>
                 <nav>
@@ -77,17 +77,33 @@
                accesskey untuk memberikan shortcut keyboard pada elemen, contoh: &lt;button accesskey="s"&gt;Save&lt;/button&gt; maka pengguna bisa tekan Alt + S untuk klik tombol Save
                selector CSS diawali dengan #&lt;tagar&gt; untuk id, titik &lt;.&gt; untuk class, dan nama tag untuk langsung elemnt, minusnya semua tag akan terpengaruh
                user-scalable=no untuk menonaktifkan zoom pada perangkat mobile, contoh: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;
-                       </code>
+               width dan height untuk menentukan ukuran elemen, min-width dan max-width untuk menentukan ukuran minimum dan maksimum elemen
+               method untuk &lt;form&gt; ada get untuk mengirimkan data melalui URL, post untuk mengirimkan data melalui body, put untuk mengganti data yang sudah ada, delete untuk menghapus data, dan patch untuk memperbarui sebagian data. contoh: &lt;form method="post" action="submit.php"&gt;
+               border untuk border di css
+               margin untuk jarak di luar border, jenis margin ada margin-top, margin-right, margin-bottom, margin-left
+               gunakan hanya &lt;margin&gt; di css untuk memberikan jarak yang sama di semua sisi, contoh: margin: 10px; maka setiap sisi akan memiliki margin 10px, jika ada 2 value seperti margin: 10px 20px; maka value awal untuk margin-top dan bottom dan value kedua untuk margin-right dan left, jika ada 4 value seperti margin: 10px 20px 30px 40px; maka value pertama untuk margin-top, value kedua untuk margin-right, value ketiga untuk margin-bottom, dan value keempat untuk margin-left
+               mirip dengan margin, padding digunakan mirip seperti margin, bedanya ini untuk didalam elemtn/border
+               text-align untuk buat ngatur posisis teks secara horizontal                       </code>
             </pre>
             <p>
   As Quincy Larson said,
   <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">
     Momentum is everything.
   </q>
+  <div class="test2">
+    <p>TEST CSS</p>
+    <p>lebih</p>
+    <div>
+        <p>harusnya ini ga efek</p>
+          </div>
+          <div>
+            <p>ini adalah contoh child combinator</p>
+          </div>
+    </div>
+  </div>
   <div>
       <button type="button">BUTTON</button>
-      <script src="index.js"></script>
-</p></div>
+      <script src="index.js"></script></div>
             </article>
     </section>
     <aside>
@@ -121,8 +137,7 @@
             </section>
             <nav>
             <about>
-                <small><a href="about.html"><p>About Musico<p></a></small>
-                   <a href="contact.html">Contact Us</a>
+                <small><a href="about.html">About Musico</a></small>
             </about>
             </nav>
             <dL>
@@ -150,7 +165,7 @@
 <label for="option1">Option 1</label><br>
 <input type="radio" id="option2" name="options" value="option2">
 <label for="option2">Option 2</label><br>
-<p> radio buttons harus punya name yang sama supaya jadi 1 pilihan</p>
+<p style="color: red;"> radio buttons harus punya name yang sama supaya jadi 1 pilihan</p>
 <textarea placeholder="tulis komentar kamu disini" rows="4" cols="50"></textarea>
 <form method="post" action="">
     <fieldset>
@@ -158,7 +173,6 @@
     <label for="email"> Sign up for our newsletter:</label>
         <input required type="email" id="email" placeholder="janedoe@gmail.com" minlength="3" maxlength="50" size="20">
         <button type="submit">Submit</button>
-</form>
 <input type="button" value="INIDIA" onclick="ININIGG()">
 </div>
 <button onclick="klik()">Klik</button>
@@ -171,7 +185,6 @@
     <option value="kurang">Jelek</option>
     </select>
     </fieldset>
-    <input type="image" src="https://as2.ftcdn.net/v2/jpg/01/09/46/77/1000_F_109467767_JwzMoMf9EMEaPedIfwXIDquzwjENZQjj.jpg" alt="submit" width="100" height="50">
         </form>
         <address>
             <h2>Musico</h2>
@@ -180,7 +193,7 @@
             <p>email: <a href="mailto:magiccosmos765@gmail.com">magiccosmos765@gmail.com</a></p>
         </address>
        
-
+<hr>
         <footer>
             <small>
             <p>© 2024 musico. All rights reserved.</p>
