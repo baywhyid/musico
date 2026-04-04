@@ -8,14 +8,14 @@
         <title>musico free audio player</title>
     </head>
     <body>
-        <h1>Musico</h1>
+        <h1 id="headerutama">Musico</h1>
         <hr>
         <header>
                 <nav>
                        <p><a href="index.html">Home</a></p>
                         <p><a href="library.html">Library</a></p>
                         <p><a href="donate.html">Donate</a></p>
-                        <p><a href="#article">Article</a></p>
+                        <p><a href="article.html">Article</a></p>
 
                 </nav>
         </header>
@@ -30,61 +30,6 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IiZRPt7q8wk?si=ymqv7Zno_r_nr7O5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <a href="https://youtu.be/IiZRPt7q8wk?si=ymqv7Zno_r_nr7O5" target="_blank">Watch The Video</a>
         </main>
-        <section id="article">
-        <article>
-            <pre>
-                <code>
-            HTML ayntax
-            &lt;abbr&gt untuk singkatan
-            &lt;time&gt untuk tanggal dan waktu
-            &lt;figcaption&gt untuk caption gambar
-            &lt;blockquote&gt untuk nge quote
-            &lt;u&gt untuk teks yang di bawah atau unarticulated anonation semantic untuk pengejaan yang salah seperti contoh <u>tesk</u> yang seharusnya ditulis teks
-            &lt;s&gt; S untuk strong atau teks yang penting
-            stage input ada disbled untuk menonaktifkan input readonly untuk membaca saja focused untuk menandai input yang sedang diinteraksi dan default untuk input yang normal atau bawaan
-            &lt;ruby&gt untuk anotasi ruby &lt;ruby&gt 明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; &lt;/ruby&gt; hasilnya <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby></p>
-            <p>input type terdiri dari: text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button</p>
-            <p> id untuk memberikan identifier unik pada elemen</p>
-            <p> &lt;button&gt; memiliki type submit, reset, dan button</p>
-            <p> submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa</p>
-            <p> value untuk menentukan nilai awal dari input, contoh: &lt;input&gt; type="text" name="nama" value="John Doe"&gt; yang dikirim adalah nama="John Doe"</p>
-            <p><abbr title="cartel jalisco neuva generacion">CJNG</abbr> adalah kartel narkoba yang berasal dari jalsico, Mexico</p>
-            <p>i write this on <time datetime="2026-03-02T14:33">March 2, 2026 at 2:33 PM</time></p>
-            <p>contoh superscript ada di <strong>KOD<sup>e</sup></strong></p>
-            <p>contoh subscript ada di <strong>H<sub>2</sub>O</strong></p>
-            <p> &lt;table&gt; untuk membuat tabel, &lt;tr&gt; untuk baris, &lt;td&gt; untuk sel</p>
-            <p> &lt;caption&gt; untuk judul tabel</p>
-             artikel tentang roles ada di <a href="role.html">role.html</a>
-             &lt;aria-label&gt; untuk memberikan label pada elemen, contoh: &lt;div role="button" aria-label="Click me"&gt;Button</div>
-            <p> https://validator.w3.org/ untuk validasi HTML</p>
-            <p>Implicit form association: inputs can be associated with labels by wrapping the input field inside the label element.</p>
-            &lt;dialog&gt; untuk membuat dialog atau pop-up yang bisa dibuka dan ditutup dengan JavaScript, contoh:
-             &lt;dialog open&gt;
-             &lt;aside&gt;
-               &lt;h2&gt;Dialog Title&lt;/h2&gt;
-               &lt;p&gt;This is a dialog content.&lt;/p&gt;
-               &lt;button onclick="this.parentElement.close()"&gt;Close&lt;/button&gt;
-               fungsi &lt;aside&gt; untuk konten sampingan atau iklan yang bukan bagian konten utama, contoh: &lt;aside&gt;
-               &lt;h2&gt;Related Links&lt;/h2&gt;
-               type input ada banyak, seperti text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button, range.
-               aria adalah atribut untuk memberikan informasi tambahan tentang elemen kepada assistive technologies, contoh: &lt;div role="button" aria-label="Click me"&gt;Button&lt;/div&gt;
-               &lt;button&gt; memiliki type submit, reset, dan button. submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa. contoh: &lt;button type="submit"&gt;Submit&lt;/button&gt; default untuk button tanpa type adalah "submit" jadi jika kita buat &lt;button&gt;Submit&lt;/button&gt; maka itu sama dengan &lt;button type="submit"&gt;Submit&lt;/button&gt;
-               inline elements yang nempel dalam satu baris seperti ini teks <span>inline</span> lanjut lagi
-               jenis dari &lt;link&gt; ada 3 yaitu stylesheet untuk menghubungkan file CSS, prefetch untuk memuat sumber daya di latar belakang, dan icon untuk favicon dan preload untuk memuat sumber daya sebelumnya. contoh: &lt;link rel="stylesheet" href="style.css"&gt;
-               atribut track untuk elemen &lt;video&gt; dan &lt;audio&gt; untuk menyediakan teks terjemahan atau deskripsi audio
-               fungsi kind subtitles untuk tampilin terjemahkan atau teks, caption untuk deksripsi audo seperti [tertawa], chapter untuk menandai bagian video misa intro-test outro, dan metadata untuk informasi js yang tidak tampil ke pengguna
-               subtitles harus diawal WEBVTT, format subtitles adalah HH:MM:SS.mmm --&gt; HH:MM:SS.mmm dengan --&gt; sebagai pemisah antara waktu mulai dan waktu selesai
-               accesskey untuk memberikan shortcut keyboard pada elemen, contoh: &lt;button accesskey="s"&gt;Save&lt;/button&gt; maka pengguna bisa tekan Alt + S untuk klik tombol Save
-               selector CSS diawali dengan #&lt;tagar&gt; untuk id, titik &lt;.&gt; untuk class, dan nama tag untuk langsung elemnt, minusnya semua tag akan terpengaruh
-               user-scalable=no untuk menonaktifkan zoom pada perangkat mobile, contoh: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;
-               width dan height untuk menentukan ukuran elemen, min-width dan max-width untuk menentukan ukuran minimum dan maksimum elemen
-               method untuk &lt;form&gt; ada get untuk mengirimkan data melalui URL, post untuk mengirimkan data melalui body, put untuk mengganti data yang sudah ada, delete untuk menghapus data, dan patch untuk memperbarui sebagian data. contoh: &lt;form method="post" action="submit.php"&gt;
-               border untuk border di css
-               margin untuk jarak di luar border, jenis margin ada margin-top, margin-right, margin-bottom, margin-left
-               gunakan hanya &lt;margin&gt; di css untuk memberikan jarak yang sama di semua sisi, contoh: margin: 10px; maka setiap sisi akan memiliki margin 10px, jika ada 2 value seperti margin: 10px 20px; maka value awal untuk margin-top dan bottom dan value kedua untuk margin-right dan left, jika ada 4 value seperti margin: 10px 20px 30px 40px; maka value pertama untuk margin-top, value kedua untuk margin-right, value ketiga untuk margin-bottom, dan value keempat untuk margin-left
-               mirip dengan margin, padding digunakan mirip seperti margin, bedanya ini untuk didalam elemtn/border
-               text-align untuk buat ngatur posisis teks secara horizontal                       </code>
-            </pre>
             <p>
   As Quincy Larson said,
   <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">
@@ -104,7 +49,6 @@
   <div>
       <button type="button">BUTTON</button>
       <script src="index.js"></script></div>
-            </article>
     </section>
     <aside>
             <h2>Related Links</h2>
@@ -115,31 +59,9 @@
                 <li><a href="https://www.w3.org/TR/html52/interactive-elements.html#interactive-elements" target="_blank">Interactive Elements</a></li>
                 <li><a href="https://www.w3.org/TR/html52/links.html#links" target="_blank">Links</a></li>
                 <li><a href="semantic.html" target="_blank">Semantic HTML</a></li>
+                <li><a href="galery.html" target="_blank">Galeri Gambar</a></li>
             </ul>
     </aside>
-        <section>
-            <h2>koleksi gambar dari pexels</h2>
-            <figure>
-                <img src="https://images.pexels.com/photos/10788003/pexels-photo-10788003.jpeg" width="560" height="315" alt="kucing oyen dari pexels">
-                <figcaption>Kucing Oyen dari <a href="https://www.pexels.com/id-id/foto/hewan-binatang-fauna-hewan-peliharaan-10788003/" target="_blank">Pexels</a></figcaption>
-                <video width="560" height="315" controls>
-  <source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" type="video/mp4">
-
-  <track 
-    src="subtitles.vtt" 
-    kind="subtitles" 
-    srclang="en" 
-    label="inggris
-    default
-    ">your browser does not support the video tag.
-</video>
-            </figure>
-            </section>
-            <nav>
-            <about>
-                <small><a href="about.html">About Musico</a></small>
-            </about>
-            </nav>
             <dL>
                 <dt>HTML</dt>
                 <dd>HyperText Markup Language</dd>
@@ -186,18 +108,29 @@
     </select>
     </fieldset>
         </form>
+        <div>
         <address>
             <h2>Musico</h2>
             <p>123 Music Street, Sound City</p>
-            <p>phone: <a href="tel:+6281356347560">+62 813-5634-7560</a></p>
-            <p>email: <a href="mailto:magiccosmos765@gmail.com">magiccosmos765@gmail.com</a></p>
+            <p>phone: <a href="tel:+6281356347560" class="contact">+62 813-5634-7560</a></p>
+            <p>email: <a href="mailto:magiccosmos765@gmail.com" class="contact">magiccosmos765@gmail.com</a></p>
+            <p>Follow us on social media:</p>
+            <a href="https://github.com/baywhyid/" target="_blank">
+                <img src="assets/icon/github-logo.png" alt="github icon" width="50">
+                <p><a href="about.html" class="contact">About Musico</a></p>
+            </a>
         </address>
        
-<hr>
+<hr class="hr-classes2">
         <footer>
             <small>
             <p>© 2024 musico. All rights reserved.</p>
             </small>
+            <div class="social-media">
+                <a href="https://github.com/baywhyid/" target="_blank">
+                <img src="assets/icon/github-logo.png" alt="github icon" width="25">
+                </a>
         </footer>
+    </div>
     </body>
 </html>

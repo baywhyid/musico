@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>musico free audio player</title>
+    </head>
+    <body>
+        <h1>notes</h1>
+        <hr>
+        
+        <p><a href="index.html">Back to Home</a></p>
+        <p>notes dari freecodecamp</p>
+        <label for="search">Cari Kata:</label>
+        <input type="text" placeholder="search" id="search">
+        <p>welcome to musico beta version</p>
+        <div>
+        <span>Volume:</span><input type="range" min="0" max="100" value="50">
+        </div>
+        <main>
+           <article>
+            <pre>
+                <code>
+                   HTML ayntax
+            &lt;abbr&gt untuk singkatan
+            &lt;time&gt untuk tanggal dan waktu
+            &lt;figcaption&gt untuk caption gambar
+            &lt;blockquote&gt untuk nge quote
+            &lt;u&gt untuk teks yang di bawah atau unarticulated anonation semantic untuk pengejaan yang salah seperti contoh <u>tesk</u> yang seharusnya ditulis teks
+            &lt;s&gt; S untuk strong atau teks yang penting
+            stage input ada disbled untuk menonaktifkan input readonly untuk membaca saja focused untuk menandai input yang sedang diinteraksi dan default untuk input yang normal atau bawaan
+            &lt;ruby&gt untuk anotasi ruby &lt;ruby&gt 明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; &lt;/ruby&gt; hasilnya <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby></p>
+            <p>input type terdiri dari: text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button</p>
+            <p> id untuk memberikan identifier unik pada elemen</p>
+            <p> &lt;button&gt; memiliki type submit, reset, dan button</p>
+            <p> submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa</p>
+            <p> value untuk menentukan nilai awal dari input, contoh: &lt;input&gt; type="text" name="nama" value="John Doe"&gt; yang dikirim adalah nama="John Doe"</p>
+            <p><abbr title="cartel jalisco neuva generacion">CJNG</abbr> adalah kartel narkoba yang berasal dari jalsico, Mexico</p>
+            <p>i write this on <time datetime="2026-03-02T14:33">March 2, 2026 at 2:33 PM</time></p>
+            <p>contoh superscript ada di <strong>KOD<sup>e</sup></strong></p>
+            <p>contoh subscript ada di <strong>H<sub>2</sub>O</strong></p>
+            <p> &lt;table&gt; untuk membuat tabel, &lt;tr&gt; untuk baris, &lt;td&gt; untuk sel</p>
+            <p> &lt;caption&gt; untuk judul tabel</p>
+             artikel tentang roles ada di <a href="role.html">role.html</a>
+             &lt;aria-label&gt; untuk memberikan label pada elemen, contoh: &lt;div role="button" aria-label="Click me"&gt;Button</div>
+            <p> https://validator.w3.org/ untuk validasi HTML</p>
+            <p>Implicit form association: inputs can be associated with labels by wrapping the input field inside the label element.</p>
+            &lt;dialog&gt; untuk membuat dialog atau pop-up yang bisa dibuka dan ditutup dengan JavaScript, contoh:
+             &lt;dialog open&gt;
+             &lt;aside&gt;
+               &lt;h2&gt;Dialog Title&lt;/h2&gt;
+               &lt;p&gt;This is a dialog content.&lt;/p&gt;
+               &lt;button onclick="this.parentElement.close()"&gt;Close&lt;/button&gt;
+               fungsi &lt;aside&gt; untuk konten sampingan atau iklan yang bukan bagian konten utama, contoh: &lt;aside&gt;
+               &lt;h2&gt;Related Links&lt;/h2&gt;
+               type input ada banyak, seperti text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button, range.
+               aria adalah atribut untuk memberikan informasi tambahan tentang elemen kepada assistive technologies, contoh: &lt;div role="button" aria-label="Click me"&gt;Button&lt;/div&gt;
+               &lt;button&gt; memiliki type submit, reset, dan button. submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa. contoh: &lt;button type="submit"&gt;Submit&lt;/button&gt; default untuk button tanpa type adalah "submit" jadi jika kita buat &lt;button&gt;Submit&lt;/button&gt; maka itu sama dengan &lt;button type="submit"&gt;Submit&lt;/button&gt;
+               inline elements yang nempel dalam satu baris seperti ini teks <span>inline</span> lanjut lagi
+               jenis dari &lt;link&gt; ada 3 yaitu stylesheet untuk menghubungkan file CSS, prefetch untuk memuat sumber daya di latar belakang, dan icon untuk favicon dan preload untuk memuat sumber daya sebelumnya. contoh: &lt;link rel="stylesheet" href="style.css"&gt;
+               atribut track untuk elemen &lt;video&gt; dan &lt;audio&gt; untuk menyediakan teks terjemahan atau deskripsi audio
+               fungsi kind subtitles untuk tampilin terjemahkan atau teks, caption untuk deksripsi audo seperti [tertawa], chapter untuk menandai bagian video misa intro-test outro, dan metadata untuk informasi js yang tidak tampil ke pengguna
+               subtitles harus diawal WEBVTT, format subtitles adalah HH:MM:SS.mmm --&gt; HH:MM:SS.mmm dengan --&gt; sebagai pemisah antara waktu mulai dan waktu selesai
+               accesskey untuk memberikan shortcut keyboard pada elemen, contoh: &lt;button accesskey="s"&gt;Save&lt;/button&gt; maka pengguna bisa tekan Alt + S untuk klik tombol Save
+               selector CSS diawali dengan #&lt;tagar&gt; untuk id, titik &lt;.&gt; untuk class, dan nama tag untuk langsung elemnt, minusnya semua tag akan terpengaruh
+               user-scalable=no untuk menonaktifkan zoom pada perangkat mobile, contoh: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;
+               width dan height untuk menentukan ukuran elemen, min-width dan max-width untuk menentukan ukuran minimum dan maksimum elemen
+               method untuk &lt;form&gt; ada get untuk mengirimkan data melalui URL, post untuk mengirimkan data melalui body, put untuk mengganti data yang sudah ada, delete untuk menghapus data, dan patch untuk memperbarui sebagian data. contoh: &lt;form method="post" action="submit.php"&gt;
+               border untuk border di css
+               margin untuk jarak di luar border, jenis margin ada margin-top, margin-right, margin-bottom, margin-left
+               gunakan hanya &lt;margin&gt; di css untuk memberikan jarak yang sama di semua sisi, contoh: margin: 10px; maka setiap sisi akan memiliki margin 10px, jika ada 2 value seperti margin: 10px 20px; maka value awal untuk margin-top dan bottom dan value kedua untuk margin-right dan left, jika ada 4 value seperti margin: 10px 20px 30px 40px; maka value pertama untuk margin-top, value kedua untuk margin-right, value ketiga untuk margin-bottom, dan value keempat untuk margin-left
+               mirip dengan margin, padding digunakan mirip seperti margin, bedanya ini untuk didalam elemtn/border
+               text-align untuk buat ngatur posisis teks secara horizontal
+               text-align digunakan untuk mengatur posisiteks di css
+               display di css 
+               gunakan ,/coma untuk menghubungkan class yang sama di css contoh: .class1, .class2 { color: red; }
+               inherit untuk warna supaya ngikut warna parent element
+               gunakan text-decoration: none; untuk menghilangkan <span>garis bawah</span> pada link 
+                </code>
+            </pre>
+            </article>
+        </main>
