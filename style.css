@@ -4,7 +4,7 @@ body {
   color: white;
 }
 h1, h2 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+  font-family: extra-light;
 }
 h1 {
   color: whitesmoke;
@@ -16,6 +16,9 @@ a:visited {
 a:hover {
   color: red;
 }
+a:active {
+  color: blue;
+}
 fieldset {
   border: 2px solid black;
   padding: 10px;
@@ -23,33 +26,14 @@ fieldset {
 }
 .quotes1 {
   font-style: italic;
-  color: rgb(35, 206, 35);
-}
-.test2 > p {
   font-style: bold;
-  color: red;
-}
-.footer {
-  background-color: grey;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
+  color: greenyellow;
 }
 .contact {
   color: white;
   text-decoration: none;
   font-size: 16px;
 }
-.social-media {
-  margin-right: 100px;
-}
-.hr-classes2 {
-  margin: 30px 0;
-}
-section {
-  padding: 60px 20px;
-}
-button:hover {
-  transform: translateY(-2px);
+a.contact:hover, a.contact:visited {
+  color: white;
 }
