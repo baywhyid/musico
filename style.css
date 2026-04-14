@@ -1,23 +1,35 @@
 body {
-  background-color: rgb(32, 32, 32);
+  background: linear-gradient(to right, #162031, #2a5298);
   font-family: Arial, sans-serif;
   color: white;
 }
-h1, h2 {
-  font-family: extra-light;
+p {
+  font-size: 17px;
+  line-height: 1.5;
+  font-family: poppins;
 }
-h1 {
+.first-title {
+  font-family: extra-light;
   color: whitesmoke;
+}
+.sub-title {
+  font-family: extra-light;
+  color: whitesmoke;
+}
+a {
+  color: rgb(91, 91, 132);
+  text-decoration: underline;
 }
 a:visited {
   color: brown;
   border-color: brown;
+  border-bottom: brown solid 1px;
 }
 a:hover {
   color: red;
 }
 a:active {
-  color: blue;
+  color: white;
 }
 fieldset {
   border: 2px solid black;
@@ -26,7 +38,6 @@ fieldset {
 }
 .quotes1 {
   font-style: italic;
-  font-style: bold;
   color: greenyellow;
 }
 .contact {
@@ -34,6 +45,47 @@ fieldset {
   text-decoration: none;
   font-size: 16px;
 }
-a.contact:hover, a.contact:visited {
+.contact:hover {
   color: white;
+  text-decoration: underline;
+}
+.contact:visited {
+  color: white;
+  text-decoration: none;
+}
+.form-label {
+  line-height: 2;
+}
+.test2>p{
+  color: rgb(252, 0, 0);
+  font-size: 20px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+video {
+  max-width: 100%;
+  height: auto;
+}
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+.testol {
+  width: 200px;
+  border: 1px solid black;
+  list-style-position: inside;
+}
+.testul {
+  width: 200px;
+  border: 1px solid black;
+  list-style-type: square;
+}
+.ul-container {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.testradial {
+  background: radial-gradient(circle closest-side at center, red, yellow, green);
 }

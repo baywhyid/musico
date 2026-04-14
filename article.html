@@ -16,6 +16,7 @@
         <label for="search">Cari Teks:</label>
         <input type="text" placeholder="search" id="search">
         <p>welcome to musico beta version</p>
+        <a href="lab.html">lab.html</a>
         <div>
         <span>Volume:</span><input type="range" min="0" max="100" value="50">
         </div>
@@ -84,7 +85,28 @@
                semakin sempit selector maka semakin spesifik, contoh: div p lebih spesifik daripada p
                !important untuk memaksa style diterapkan meskipun ada style lain yang lebih spesifik, !important ditulis setelah value dan sebelum semicolon
                default value untuk min-height adalah 0
-
+               list-style digunakan untuk mengatur tampilan pada ul dan ol, list-style memiliki 3 jenis yaitu type, position dan image
+               type untuk mengatur jenis penanda pada ul dan mengubah angka pada ol
+               ketiga value dari list-style bisa digunakan bersamaan, contoh: list-style: square inside url("image.png"); , urutan value tidak berpengaruh pada hasilnya
+               list-style-type untuk ul ada disc/default, lalu sqaure untuk kotak, circle untuk lingkaran dan none untuk hilangkan penanda
+               untuk ol ada decimal/default, lalu decimal-leading-zero ini decimal hanya saja dimulai dengan angka 0 seperti 01,02, lalu ada lower/upper alpha untuk angka aplhabet lower untuk angka kecil dan upper sebaliknya, terakhir ada lower/upper roman untuk angka romawi
+               list-style-position untuk menentukan posisi penanda pada ul dan ol, inside untuk penanda berada di dalam kotak teks dan outside untuk penanda berada di luar kotak teks
+               list-style-image untuk mengganti marker jadi gambar
+               font-syle untuk mengatur gaya font, ada normal untuk gaya normal, italic untuk gaya miring, dan oblique untuk gaya miring yang lebih ringan
+                font-weight untuk mengatur ketebalan font, ada normal untuk ketebalan normal, bold untuk ketebalan tebal, dan angka 100-900 untuk ketebalan yang lebih spesifik
+                font-family untuk mengatur jenis font, contoh: font-family: Arial, sans-serif; untuk menggunakan font Arial dan jika tidak tersedia maka gunakan font sans-serif
+                font-size untuk mengatur ukuran font, contoh: font-size: 16px; untuk ukuran 16 piksel, font-size: 1em; untuk ukuran yang sama dengan elemen induk, dan font-size: 100%; untuk ukuran yang sama dengan elemen induk
+                background-image digunakan untuk menambahkan gambar sebagai background pada html
+                background-image akan secara otomatis mengulang jika ukuran gambar lebih kecil dari elemen, untuk mengatur agar gambar tidak mengulang gunakan background-repeat: no-repeat; dan untuk mengatur posisi gambar gunakan background-position: center; untuk menempatkan gambar di tengah elemen
+                untuk background-position ada beberapa value seperti top, bottom, left, right, center, dan juga bisa menggunakan nilai persentase atau pixel/px untuk menentukan posisi gambar secara lebih spesifik
+                jika ingin mengulang secara horizontal atau menyamping gunakan background-repeat: repeat-x; dan untuk mengulang secara vertikal atau kebawah gunakan background-repeat: repeat-y;
+                lalu ada background-attachment untuk mengatur apakah background akan tetap pada tempatnya saat halaman di scroll atau ikut bergerak, contoh: background-attachment: fixed; untuk membuat background tetap pada tempatnya saat halaman di scroll
+                jika mau singkat bisa pake background: url("image.png") no-repeat center fixed; untuk menggabungkan beberapa properti background sekaligus
+                background-size untuk mengatur ukuran gambar background, contoh: background-size: cover; untuk membuat gambar menutupi seluruh elemen, background-size: contain; untuk membuat gambar tetap proporsional dan masuk ke dalam elemen, dan background-size: 100% 100%; untuk membuat gambar memenuhi seluruh elemen tanpa mempertahankan proporsi
+                linear-gradient untuk membuat gradien linear sebagai background, contoh: background: linear-gradient(arah, warna awal, warna akhir); untuk membuat gradien dari warna awal ke warna akhir secara horizontal
+                untuk arah/direction bisa to right atau ke kiri, to bottom atau ke bawah, to top atau ke atas, dan juga bisa menggunakan sudut seperti 45deg untuk membuat gradien diagonal
+                selain linear-gradient ada radial-gradient yang memancarkan transisi warna dari sebuah bola/circle maupun ellipse
+                contoh syntax radial-gradient: background: radial-gradient(circle at center, red, yellow, green); untuk membuat gradien radial dengan bentuk lingkaran yang memancarkan warna dari tengah ke luar dengan urutan warna merah, kuning, dan hijau 
             </pre>
             </article>
         </main>

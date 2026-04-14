@@ -8,8 +8,12 @@
         <title>musico free audio player</title>
     </head>
     <body>
-        <h1 id="headerutama">Musico</h1>
+        <h1 class="first-title">Musico</h1>
         <hr>
+        <button class="nav-bar-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+
         <header>
                 <nav>
                        <p><a href="index.html">Home</a></p>
@@ -20,8 +24,10 @@
                 </nav>
         </header>
         <p>musico is a free audio player that allows you to listen yo your music collection without any cost. its a simple and easy to use audio player that supports a wide range of audio format</p>
+        <div class="search-bar">
         <label for="search">Search Music:</label>
         <input type="text" placeholder="search music" id="search">
+        </div>
         <p>welcome to musico beta version</p>
         <div>
         <span>Volume:</span><input type="range" min="0" max="100" value="50">
@@ -37,7 +43,6 @@
   </q>
   <div class="test2">
     <p>TEST CSS</p>
-    <p>lebih</p>
     <div>
         <p>harusnya ini ga efek</p>
           </div>
@@ -51,8 +56,8 @@
       <script src="index.js"></script></div>
     </section>
     <aside>
-            <h2>Related Links</h2>
-            <ul>
+            <h2 class="sub-title">Docs</h2>
+            <ul class="ul-container">
                 <li><a href="https://www.w3.org/TR/html52/semantics.html#semantics" target="_blank">HTML Semantics</a></li>
                 <li><a href="https://www.w3.org/TR/html52/dom.html#global-attributes" target="_blank">Global Attributes</a></li>
                 <li><a href="https://www.w3.org/TR/html52/forms.html#forms" target="_blank">HTML Forms</a></li>
@@ -60,6 +65,7 @@
                 <li><a href="https://www.w3.org/TR/html52/links.html#links" target="_blank">Links</a></li>
                 <li><a href="semantic.html" target="_blank">Semantic HTML</a></li>
                 <li><a href="galery.html">Galeri Gambar</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
             </ul>
     </aside>
             <dL>
@@ -70,7 +76,7 @@
             <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/" class="quotes1">
   "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
 </blockquote>
-&larr;
+code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
 <p>&mdash; Bayu Ardiansyah</p>
  <div role="math">
         <p>Contoh persamaan matematika:</p>
@@ -85,9 +91,9 @@
     </dialog>
 
 <input type="radio" id="option1" name="options" value="option1">
-<label for="option1">Option 1</label><br>
+<label class="form-label" for="option1">Option 1</label><br>
 <input type="radio" id="option2" name="options" value="option2">
-<label for="option2">Option 2</label><br>
+<label class="form-label" for="option2">Option 2</label><br>
 <p style="color: red;"> radio buttons harus punya name yang sama supaya jadi 1 pilihan</p>
 <textarea placeholder="tulis komentar kamu disini" rows="4" cols="50"></textarea>
 <form method="post" action="">
@@ -111,7 +117,7 @@
         </form>
         <section>
         <address>
-            <h2>Musico</h2>
+            <h2 class="sub-title">Musico</h2>
             <p>123 Music Street, Sound City</p>
             <p>phone: <a href="tel:+6281356347560" class="contact">+62 813-5634-7560</a></p>
             <p>email: <a href="mailto:magiccosmos765@gmail.com" class="contact">magiccosmos765@gmail.com</a></p>
