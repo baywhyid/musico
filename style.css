@@ -1,15 +1,22 @@
 body {
-  background: linear-gradient(to right, #162031, #2a5298);
-  font-family: Arial, sans-serif;
-  color: white;
+  background: rgba(0, 0, 0, 0.866);
+  font-family: sans-serif, arial;
+  color: #fff;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+
 }
 p {
   font-size: 17px;
   line-height: 1.5;
   font-family: poppins;
+  margin-right: 20px;
 }
 .first-title {
-  font-family: extra-light;
+  font-family: sora;
   color: whitesmoke;
 }
 .sub-title {
@@ -17,19 +24,25 @@ p {
   color: whitesmoke;
 }
 a {
-  color: rgb(91, 91, 132);
-  text-decoration: underline;
+  color: #1E90FF;
 }
 a:visited {
   color: brown;
   border-color: brown;
   border-bottom: brown solid 1px;
 }
+.home:hover, .article:hover, .library:hover, .donate:hover {
+  text-decoration: none;
+  border: solid 1px #000000;
+  transform: scale(1.1);
+  color: black;
+}
 a:hover {
-  color: red;
+  color: rgb(91, 91, 132);
+  text-decoration: underline;
 }
 a:active {
-  color: white;
+  color: red;
 }
 fieldset {
   border: 2px solid black;
@@ -41,7 +54,7 @@ fieldset {
   color: greenyellow;
 }
 .contact {
-  color: white;
+  color: gray;
   text-decoration: none;
   font-size: 16px;
 }
@@ -50,7 +63,7 @@ fieldset {
   text-decoration: underline;
 }
 .contact:visited {
-  color: white;
+  color: gray;
   text-decoration: none;
 }
 .form-label {
@@ -88,4 +101,98 @@ iframe {
 }
 .testradial {
   background: radial-gradient(circle closest-side at center, red, yellow, green);
+}
+.figure-image>img {
+  border: 2px solid green;
+  border-radius: 10px;
+}
+.figure-image>video {
+  outline: 5px solid red;
+}
+.aligment {
+  background: linear-gradient(to right, #162031, #2a5298);
+  color: white;
+  border: 2px solid black;
+
+}
+.home, .article, .library, .donate {
+  display: block;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 15px;
+  width: 80px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 5px;
+  border: solid 1px #000000;
+}
+.home:visited, .article:visited, .library:visited, .donate:visited {
+  border-color: black;
+  text-decoration: none;
+  color: black;
+}
+.search-bar>button {
+  cursor: pointer;
+}
+.search-bar {
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: transparent;
+  padding-right: 30%;
+  color: white;
+  border-color: black;
+  font-size: 16px;
+}
+.search-bar:hover {
+  box-shadow:0 4px 10px rgba(0, 0, 0, 0.866)
+}
+.logo {
+  display: flex;
+  filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%);
+  margin-right: 10px;
+  gap: 20px;
+}
+.logo-telegram:hover, .logo-github:hover {
+  transform: scale(1.1);
+  filter: invert(0%) sepia(0%) grayscale(70%) brightness(50%);
+}
+.contact-about {
+  color: gainsboro;
+  text-decoration: underline
+  font-size: 16px;
+}
+.contact-about:hover {
+  color: white;
+  text-decoration: none;
+}
+.contact-about:visited {
+  color: gainsboro;
+  text-decoration: none;
+}
+.aside {
+  margin: 0 30px;
+}
+.media-contact {
+  margin: 0 40px;
+}
+.search-bar:active {
+
+}
+.btn-modal {
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.btn-modal:hover {
+  background-color: green;
+  color: white;
+  border-color: #1E90FF;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.modal-dialog {
+  background-color: orange;
+  color: red;
+  border-radius: 10px;
+  border-color: orange
 }

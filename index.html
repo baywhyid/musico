@@ -5,9 +5,14 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <link rel="preload" href="style.css" as="style">
+        <head>
+  <script src="index.js" defer></script>
+</head>
         <title>musico free audio player</title>
     </head>
     <body>
+        <div class="container">
         <h1 class="first-title">Musico</h1>
         <hr>
         <button class="nav-bar-toggle" aria-label="Toggle navigation">
@@ -16,18 +21,18 @@
 
         <header>
                 <nav>
-                       <p><a href="index.html">Home</a></p>
-                        <p><a href="library.html">Library</a></p>
-                        <p><a href="donate.html">Donate</a></p>
-                        <p><a href="article.html">Article</a></p>
+                       <p><a href="index.html" class="home">Home</a></p>
+                        <p><a href="library.html" class="library">Library</a></p>
+                        <p><a href="donate.html" class="donate">Donate</a></p>
+                        <p><a href="article.html" class="article">Article</a></p>
 
                 </nav>
         </header>
-        <p>musico is a free audio player that allows you to listen yo your music collection without any cost. its a simple and easy to use audio player that supports a wide range of audio format</p>
-        <div class="search-bar">
-        <label for="search">Search Music:</label>
-        <input type="text" placeholder="search music" id="search">
-        </div>
+        <p>home/library/donate/article</p>
+        <p>musico is a free audio player that allows you to listen to your music collection without any cost. it's a simple and easy to use audio player that supports a wide range of audio formats</p>
+        <form method="POST" autocomplete="off">
+        <input type="text" placeholder="cari kata" id="search" class="search-bar">
+        </form>
         <p>welcome to musico beta version</p>
         <div>
         <span>Volume:</span><input type="range" min="0" max="100" value="50">
@@ -52,44 +57,54 @@
     </div>
   </div>
   <div>
-      <button type="button">BUTTON</button>
-      <script src="index.js"></script></div>
-    </section>
-    <aside>
+      <button type="button" id="open-modal" class="btn-modal">TAP</button>
+      <dialog class="modal-dialog">
+  <h2>SILAHKAN KIRIM KOMENMU!</h2>
+  <p>Get the latest updates and offers.</p>
+  <button>Subscribe</button>
+  <button>Close</button>
+</dialog>
+    </div>
+    <aside class="aside">
             <h2 class="sub-title">Docs</h2>
-            <ul class="ul-container">
+             <ul class="ul-container">
                 <li><a href="https://www.w3.org/TR/html52/semantics.html#semantics" target="_blank">HTML Semantics</a></li>
                 <li><a href="https://www.w3.org/TR/html52/dom.html#global-attributes" target="_blank">Global Attributes</a></li>
-                <li><a href="https://www.w3.org/TR/html52/forms.html#forms" target="_blank">HTML Forms</a></li>
                 <li><a href="https://www.w3.org/TR/html52/interactive-elements.html#interactive-elements" target="_blank">Interactive Elements</a></li>
                 <li><a href="https://www.w3.org/TR/html52/links.html#links" target="_blank">Links</a></li>
                 <li><a href="semantic.html" target="_blank">Semantic HTML</a></li>
                 <li><a href="galery.html">Galeri Gambar</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.npmjs.com/" target="_blank">npm library</a></li>
+                <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
             </ul>
     </aside>
+    <div class="test aligment">
             <dL>
                 <dt>HTML</dt>
                 <dd>HyperText Markup Language</dd>
             </dL>
-            <div>
+            <dL>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
             <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/" class="quotes1">
   "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
 </blockquote>
+</div>
 code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
 <p>&mdash; Bayu Ardiansyah</p>
  <div role="math">
         <p>Contoh persamaan matematika:</p>
         <p>$$E = mc^2$$</p> 
-    </div>
-    <div role="button">
+       <div role="button">
         tap
-    </div>
+       </div>
     <dialog open>
         <p>Dialog terbuka</p>
         <button onclick="this.parentElement.close()">Tutup</button>
     </dialog>
-
+ </div>
+ <div>
 <input type="radio" id="option1" name="options" value="option1">
 <label class="form-label" for="option1">Option 1</label><br>
 <input type="radio" id="option2" name="options" value="option2">
@@ -115,24 +130,28 @@ code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
     </select>
     </fieldset>
         </form>
-        <section>
+        <section class="media-contact">
         <address>
-            <h2 class="sub-title">Musico</h2>
-            <p>123 Music Street, Sound City</p>
+            <h2 class="sub-title">Kontak</h2>
             <p>phone: <a href="tel:+6281356347560" class="contact">+62 813-5634-7560</a></p>
             <p>email: <a href="mailto:magiccosmos765@gmail.com" class="contact">magiccosmos765@gmail.com</a></p>
             <p>Follow us on social media:</p>
+            <div class="logo">
             <a href="https://github.com/baywhyid/" target="_blank">
-           <img src="assets/icon/github-logo.png" alt="github icon" width="50"></a>
-         <p><a href="about.html" class="contact">About Musico</a></p>
+           <img src="assets/icon/icons8-github-logo-96.png" alt="github icon" width="50" class="logo-github"></a>
+           <a href="/" target="_blank">
+            <img src="assets/icon/icons8-telegram-app-50.png" alt="telegram icon" width="50" class="logo-telegram"></a>
+            </div>
+         <p><a href="about.html" class="contact-about">About Musico</a></p>
         </address>
-       
+        </section>
+    </div>
 <hr>
-        <footer>
+        <footer class="site-footer">
             <small>
             <p>© 2024 musico. All rights reserved.</p>
             </small>
         </footer>
-    </section>
     </body>
+</div>
 </html>
