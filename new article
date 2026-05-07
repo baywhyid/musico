@@ -1,0 +1,110 @@
+<dialog open>
+  <aside>
+    <h2>Dialog Title</h2>
+
+    <p>This is a dialog content.</p>
+
+    <button onclick="this.parentElement.close()">Close</button>
+
+    <p>fungsi &lt;aside&gt; untuk konten sampingan atau iklan yang bukan bagian konten utama, contoh: &lt;aside&gt;</p>
+
+    <p>&lt;h2&gt;Related Links&lt;/h2&gt;</p>
+
+    <p>type input ada banyak, seperti text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button, range.</p>
+
+    <p>aria adalah atribut untuk memberikan informasi tambahan tentang elemen kepada assistive technologies, contoh: &lt;div role="button" aria-label="Click me"&gt;Button&lt;/div&gt;</p>
+
+    <p>&lt;button&gt; memiliki type submit, reset, dan button. submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa. contoh: &lt;button type="submit"&gt;Submit&lt;/button&gt;</p>
+
+    <p>inline elements yang nempel dalam satu baris seperti ini teks &lt;span&gt;inline&lt;/span&gt; lanjut lagi</p>
+
+    <p>jenis dari &lt;link&gt; ada 3 yaitu stylesheet untuk menghubungkan file CSS, prefetch untuk memuat sumber daya di latar belakang, dan icon untuk favicon dan preload untuk memuat sumber daya sebelumnya. contoh: &lt;link rel="stylesheet" href="style.css"&gt;</p>
+
+    <p>atribut track untuk elemen &lt;video&gt; dan &lt;audio&gt; untuk menyediakan teks terjemahan atau deskripsi audio</p>
+
+    <p>fungsi kind subtitles untuk tampilin terjemahkan atau teks, caption untuk deskripsi audio, chapter untuk menandai bagian video, dan metadata untuk informasi js yang tidak tampil ke pengguna</p>
+
+    <p>subtitles harus diawal WEBVTT, format subtitles adalah HH:MM:SS.mmm --&gt; HH:MM:SS.mmm</p>
+
+    <p>accesskey untuk memberikan shortcut keyboard pada elemen, contoh: &lt;button accesskey="s"&gt;Save&lt;/button&gt;</p>
+
+    <p>selector CSS diawali dengan # untuk id, titik . untuk class, dan nama tag untuk element</p>
+
+    <p>user-scalable=no untuk menonaktifkan zoom pada perangkat mobile</p>
+
+    <p>width dan height untuk menentukan ukuran elemen</p>
+
+    <p>method untuk &lt;form&gt; ada get, post, put, delete, dan patch</p>
+
+    <p>border untuk border di css</p>
+
+    <p>margin untuk jarak di luar border</p>
+
+    <p>padding untuk jarak di dalam elemen</p>
+
+    <p>text-align untuk mengatur posisi teks</p>
+
+    <p>display di css</p>
+
+    <p>gunakan ,/coma untuk menghubungkan class yang sama di css</p>
+
+    <p>inherit untuk warna supaya ngikut warna parent element</p>
+
+    <p>gunakan text-decoration: none; untuk menghilangkan &lt;span&gt;garis bawah&lt;/span&gt;</p>
+
+    <p>gunakan code ini untuk push ke github (git add .), (git commit -m "update"), (git push)</p>
+
+    <p>tipe selector ada 4 yaitu inline selector, id selector, class selector, dan type selector</p>
+
+    <p>specificity adalah aturan prioritas CSS</p>
+
+    <p>semakin sempit selector maka semakin spesifik</p>
+
+    <p>!important untuk memaksa style diterapkan</p>
+
+    <p>default value untuk min-height adalah 0</p>
+
+    <p>list-style digunakan untuk mengatur tampilan ul dan ol</p>
+
+    <p>list-style-type untuk ul dan ol</p>
+
+    <p>list-style-position untuk menentukan posisi penanda</p>
+
+    <p>list-style-image untuk mengganti marker jadi gambar</p>
+
+    <p>font-style untuk mengatur gaya font</p>
+
+    <p>font-weight untuk mengatur ketebalan font</p>
+
+    <p>font-family untuk mengatur jenis font</p>
+
+    <p>font-size untuk mengatur ukuran font</p>
+
+    <p>background-image digunakan untuk menambahkan gambar sebagai background</p>
+
+    <p>background-repeat untuk mengatur pengulangan gambar</p>
+
+    <p>background-position untuk posisi gambar</p>
+
+    <p>background-attachment untuk efek scroll</p>
+
+    <p>background-size untuk ukuran gambar</p>
+
+    <p>linear-gradient untuk membuat gradien linear</p>
+
+    <p>radial-gradient untuk gradien berbentuk lingkaran</p>
+
+    <p>border style ada solid, dotted, double, dashed, groove</p>
+
+    <p>border-radius untuk membuat sudut melengkung</p>
+
+    <p>line-height untuk mengatur jarak antar teks</p>
+
+    <p>display digunakan untuk mengatur layout</p>
+
+    <p>cursor untuk mengubah bentuk kursor saat hover</p>
+
+    <p>infinite scrolling adalah desain scroll tanpa batas</p>
+
+  </aside>
+</dialog>

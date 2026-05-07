@@ -9,30 +9,31 @@
         <head>
   <script src="index.js" defer></script>
 </head>
+
         <title>musico free audio player</title>
     </head>
     <body>
         <div class="container">
         <h1 class="first-title">Musico</h1>
         <hr>
-        <button class="nav-bar-toggle" aria-label="Toggle navigation">
+        <button type="button" class="nav-bar-toggle test-button" aria-label="Toggle navigation">
             <span class="hamburger"></span>
         </button>
 
         <header>
-                <nav>
+                <nav class="nav-bar">
                        <p><a href="index.html" class="home">Home</a></p>
-                        <p><a href="library.html" class="library">Library</a></p>
+                        <p><a href="galery.html" class="galeri">Galeri</a></p>
                         <p><a href="donate.html" class="donate">Donate</a></p>
-                        <p><a href="article.html" class="article">Article</a></p>
+                        <p><a href="article.html" class="article">Dokumen</a></p>
 
                 </nav>
         </header>
-        <p>home/library/donate/article</p>
-        <p>musico is a free audio player that allows you to listen to your music collection without any cost. it's a simple and easy to use audio player that supports a wide range of audio formats</p>
-        <form method="POST" autocomplete="off">
-        <input type="text" placeholder="cari kata" id="search" class="search-bar">
+        <form method="POST" autocomplete="off" class="search-nav">
+        <input type="text" placeholder="cari kata..." id="searchInput" class="search-bar">
+        <button type="button" class="search-btn">Search</button>
         </form>
+        <p>home/library/donate/article</p>
         <p>welcome to musico beta version</p>
         <div>
         <span>Volume:</span><input type="range" min="0" max="100" value="50">
@@ -57,12 +58,14 @@
     </div>
   </div>
   <div>
-      <button type="button" id="open-modal" class="btn-modal">TAP</button>
+      <button type="button" id="open-modal" class="btn-dialog">TAP</button>
       <dialog class="modal-dialog">
   <h2>SILAHKAN KIRIM KOMENMU!</h2>
-  <p>Get the latest updates and offers.</p>
-  <button>Subscribe</button>
-  <button>Close</button>
+  <textarea placeholder="tulis komentar kamu disini" rows="4" cols="50" class="textarea-modal"></textarea>
+  <div class="btn-group">
+    <button class="btn-modal-send">Kirim</button>
+    <button class="btn-modal-close">Tutup</button>
+  </div>
 </dialog>
     </div>
     <aside class="aside">
@@ -76,7 +79,7 @@
                 <li><a href="galery.html">Galeri Gambar</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
                 <li><a href="https://www.npmjs.com/" target="_blank">npm library</a></li>
-                <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+                <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
             </ul>
     </aside>
     <div class="test aligment">
