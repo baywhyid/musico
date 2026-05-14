@@ -19,6 +19,7 @@
         <button type="button" class="nav-bar-toggle test-button" aria-label="Toggle navigation">
             <span class="hamburger"></span>
         </button>
+        <main class="main-container">
 
         <header>
                 <nav class="nav-bar">
@@ -28,10 +29,10 @@
                         <p><a href="article.html" class="article">Dokumen</a></p>
 
                 </nav>
-        </header>
-        <form method="POST" autocomplete="off" class="search-nav">
-        <input type="text" placeholder="cari kata..." id="searchInput" class="search-bar">
-        <button type="button" class="search-btn">Search</button>
+            </header>
+            <form class="search-nav" onsubmit="return false;" autocomplete="off">
+            <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar">
+            <button type="button" class="search-btn">CARI</button>
         </form>
         <p>home/library/donate/article</p>
         <p>welcome to musico beta version</p>
@@ -82,6 +83,7 @@
                 <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
             </ul>
     </aside>
+    <section class="section-1">
     <div class="test aligment">
             <dL>
                 <dt>HTML</dt>
@@ -108,9 +110,9 @@ code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
     </dialog>
  </div>
  <div>
-<input type="radio" id="option1" name="options" value="option1">
+<input type="radio" id="option1" name="options" value="option1" checked value="option1" class="form-input-radio-btn">
 <label class="form-label" for="option1">Option 1</label><br>
-<input type="radio" id="option2" name="options" value="option2">
+<input type="radio" id="option2" name="options" value="option2" value="option2" class="form-input-radio-btn">
 <label class="form-label" for="option2">Option 2</label><br>
 <p style="color: red;"> radio buttons harus punya name yang sama supaya jadi 1 pilihan</p>
 <textarea placeholder="tulis komentar kamu disini" rows="4" cols="50"></textarea>
@@ -118,21 +120,21 @@ code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
     <fieldset>
         <legend>Contact Us</legend>
     <label for="email"> Sign up for our newsletter:</label>
-        <input required type="email" id="email" placeholder="janedoe@gmail.com" minlength="3" maxlength="50" size="20">
-        <button type="submit">Submit</button>
+        <input required type="email" id="email" placeholder="janedoe@gmail.com" minlength="3" maxlength="50" size="20" class="form-input">
+        <button type="submit" class="submit-btn">Submit</button>
 <input type="button" value="INIDIA" onclick="ININIGG()">
 </div>
-<button onclick="klik()">Klik</button>
 <fieldset>
     <legend>Rate web kita</legend>
     <label for="rating">Rate</label>
     <select id="rating" name="rating">
-    <option value="bagus">Bagus</option>
-    <option value="cukup">Biasa</option>
-    <option value="kurang">Jelek</option>
+    <option value="bagus" class="form-option-rating">Bagus</option>
+    <option value="cukup" class="form-option-rating">Biasa</option>
+    <option value="kurang" class="form-option-rating">Jelek</option>
     </select>
     </fieldset>
         </form>
+        </section>
         <section class="media-contact">
         <address>
             <h2 class="sub-title">Kontak</h2>
@@ -149,6 +151,7 @@ code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
         </address>
         </section>
     </div>
+</main>
 <hr>
         <footer class="site-footer">
             <small>

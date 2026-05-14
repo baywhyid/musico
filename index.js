@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // === MODAL ===
   const dialog = document.querySelector('.modal-dialog');
   const openModalButton = document.getElementById('open-modal');
   const closeButton = document.querySelector('.btn-modal-close');
@@ -12,16 +11,39 @@ document.addEventListener('DOMContentLoaded', function () {
     closeButton.addEventListener('click', () => dialog.close());
   }
 
-  // === NAV TOGGLE ===
   const navToggle = document.querySelector('.nav-bar-toggle');
   const navBar = document.querySelector('.nav-bar');
   if (navToggle && navBar) {
     navToggle.addEventListener('click', () => navBar.classList.toggle('open'));
   }
 
-  // === SEARCH ===
   const searchBtn = document.querySelector('.search-btn');
   const searchInput = document.getElementById('searchInput');
+
+  if (searchInput) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'search-input-wrapper';
+    searchInput.parentNode.insertBefore(wrapper, searchInput);
+    wrapper.appendChild(searchInput);
+
+    const clearBtn = document.createElement('button');
+    clearBtn.type = 'button';
+    clearBtn.className = 'search-clear-btn';
+    clearBtn.textContent = '✕';
+    clearBtn.setAttribute('aria-label', 'Hapus teks');
+    wrapper.appendChild(clearBtn);
+
+    searchInput.addEventListener('input', () => {
+      clearBtn.style.display = searchInput.value ? 'block' : 'none';
+    });
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      clearHighlights();
+      searchInput.focus();
+    });
+  }
 
   if (searchBtn) searchBtn.addEventListener('click', doSearch);
   if (searchInput) searchInput.addEventListener('keydown', e => {
@@ -31,14 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Cegah form search submit & refresh halaman
   const searchForm = document.querySelector('.search-nav');
   if (searchForm) searchForm.addEventListener('submit', e => e.preventDefault());
 
-  // === BACK TO TOP ===
   const backToTop = document.createElement('button');
   backToTop.id = 'back-to-top';
-  backToTop.textContent = '↑ Balik ke Atas';
+  backToTop.textContent = '↑ Balik ke atas';
   backToTop.setAttribute('aria-label', 'Kembali ke atas');
   document.body.appendChild(backToTop);
 
@@ -52,11 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// === SEARCH ENGINE ===
 let originalNodes = [];
 
 function saveOriginal() {
-  // Simpan teks asli tiap text node yang bisa di-search
   originalNodes = [];
   walkAndSave(document.body);
 }
@@ -72,7 +90,6 @@ function walkAndSave(node) {
   }
 }
 
-// Simpan snapshot saat halaman pertama load
 window.addEventListener('load', saveOriginal);
 
 let searchMarks = [];
@@ -104,7 +121,6 @@ function doSearch() {
       const text = node.textContent;
       if (regex.test(text)) {
         regex.lastIndex = 0;
-        // Pecah jadi kalimat, highlight kalimat yang mengandung kata
         const sentences = text.split(/(?<=[.!?\n])\s*/);
         const fragment = document.createDocumentFragment();
         sentences.forEach((sentence, i) => {
@@ -131,8 +147,7 @@ function doSearch() {
     }
   }
 
-  const target = document.getElementById('article-content') || document.body;
-walkAndHighlight(target);
+  walkAndHighlight(document.body);
 
   searchMarks = Array.from(document.querySelectorAll('mark.search-highlight'));
 

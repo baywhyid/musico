@@ -8,14 +8,14 @@
         <title>musico free audio player</title>
     </head>
     <body class="article-body">
+        <section class="article-header">
         <h1>notes</h1>
         <hr>
-        
         <p><a href="index.html">Back to Home</a></p>
         <p>notes dari freecodecamp</p>
         <form class="search-nav" onsubmit="return false;" autocomplete="off">
-            <input type="text" placeholder="cari kata..." id="searchInput" class="search-bar">
-            <button type="button" class="search-btn">Search</button>
+            <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar">
+            <button type="button" class="search-btn">CARI</button>
         </form>
         <p>welcome to musico beta version</p>
         <a href="lab.html">lab.html</a>
@@ -24,9 +24,12 @@
         </div>
         <p>dibawah adalah contoh breadcumbs</p>
         <p><a href="index.html">home</a>/<span>article</span></p>
+        </section>
+        <hr>
         <main>
+            <h2 class="hiasan-aja">HTML, <span class="css-text">CSS Syntax</span></h2>
            <article id="article-content" class="article-content">
-                   <h2 class="hiasan-aja">HTML, CSS Syntax</h2>
+            <p class="article-paragraph">Dibawah ini adalah sedikit catatan yang saya pelajari tentang pemrograman web</p>
             <p>&lt;abbr&gt untuk singkatan</p>
              <p>&lt;address&gt untuk informasi kontak</p>
              <p>&lt;area&gt untuk area pada image map</p>
@@ -68,8 +71,8 @@
             <p>&lt;dialog open&gt;</p>
 <p>&lt;aside&gt;</p>
 <p>&lt;h2&gt;Dialog Title&lt;/h2&gt;</p>
-<p>&lt;p&gt;This is a dialog content.&lt;/p&gt;</p>
-<p>&lt;button onclick="this.parentElement.close()"&gt;Close&lt;/button&gt;</p>
+<p>&lt; p &gt;This is a dialog content.&lt;/p&gt;</p>>
+<p>&lt;button onclick="this.parentElement.close()"&gt;Close&lt;/button &gt;</p>
 <p>fungsi &lt;aside&gt; untuk konten sampingan atau iklan yang bukan bagian konten utama, contoh: &lt;aside&gt;</p>
 <p>&lt;h2&gt;Related Links&lt;/h2&gt;</p>
 <p>type input ada banyak, seperti text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button, range.</p>
@@ -83,7 +86,7 @@
 <p>accesskey untuk memberikan shortcut keyboard pada elemen, contoh: &lt;button accesskey="s"&gt;Save&lt;/button&gt; maka pengguna bisa tekan Alt + S untuk klik tombol Save</p>
 <p>selector CSS diawali dengan #&lt;tagar&gt; untuk id, titik &lt;.&gt; untuk class, dan nama tag untuk langsung elemnt, minusnya semua tag akan terpengaruh</p>
 <p>user-scalable=no untuk menonaktifkan zoom pada perangkat mobile, contoh: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;</p>
-<p>width dan height untuk menentukan ukuran elemen, min-width dan max-width untuk menentukan ukuran minimum dan maksimum elemen</p>
+<p>width dan height untuk memanjangkan atau memendekan ukuran elemen, min-width dan max-width untuk menentukan ukuran minimum dan maksimum elemen</p>
 <p>method untuk &lt;form&gt; ada get untuk mengirimkan data melalui URL, post untuk mengirimkan data melalui body, put untuk mengganti data yang sudah ada, delete untuk menghapus data, dan patch untuk memperbarui sebagian data. contoh: &lt;form method="post" action="submit.php"&gt;</p>
 <p>border untuk border di css</p>
 <p>margin untuk jarak di luar border, jenis margin ada margin-top, margin-right, margin-bottom, margin-left</p>
@@ -97,7 +100,7 @@
 <p>gunakan text-decoration: none; untuk menghilangkan <span>garis bawah</span> pada link</p>
 <p>gunakan code ini untuk push ke github (git add .), (git commit -m "update"), (git push)</p>
 <p>tipe selector ada 4 yaitu inline selector untuk specificity yang tertinggi, selanjutnya ada id selector, class selector, type/element selector lalu terakhir ada universal selector dengan specificity yang terendah</p>
-<p>specificity adalah aturan yang digunakan oleh browser untuk menentukan style mana yang akan diterapkan pada elemen ketika ada beberapa style yang berlaku, semakin tinggi specificity maka semakin diprioritaskan</p>
+<p>specificity adalah aturan yang digunakan oleh browser untuk menentukan style mana yang akan diterapkan pada elemen ketika ada beberapa style yang berlaku, semakin tinggi specificity maka semakin diprioritaskan, semakin spesifik specificity maka akan semakin sulit ditimpa style baru</p>
 <p>class selector bisa dikombinasikan dengan dengan type, id dan beberapa class dengan menggunakan titik, contoh: p.container lebih spesifik daripada .container</p>
 <p>semakin sempit selector maka semakin spesifik, contoh: div p lebih spesifik daripada p</p>
 <p>!important untuk memaksa style diterapkan meskipun ada style lain yang lebih spesifik, !important ditulis setelah value dan sebelum semicolon</p>
@@ -110,7 +113,6 @@
 <p>list-style-position untuk menentukan posisi penanda pada ul dan ol, inside untuk penanda berada di dalam kotak teks dan outside untuk penanda berada di luar kotak teks</p>
 <p>list-style-image untuk mengganti marker jadi gambar</p>
 <p>font-syle untuk mengatur gaya font, ada normal untuk gaya normal, italic untuk gaya miring, dan oblique untuk gaya miring yang lebih ringan</p>
-<p>font-weight untuk mengatur ketebalan font, ada normal untuk ketebalan normal, bold untuk ketebalan tebal, dan angka 100-900 untuk ketebalan yang lebih spesifik</p>
 <p>font-family untuk mengatur jenis font, contoh: font-family: Arial, sans-serif; untuk menggunakan font Arial dan jika tidak tersedia maka gunakan font sans-serif</p>
 <p>font-size untuk mengatur ukuran font, contoh: font-size: 16px; untuk ukuran 16 piksel, font-size: 1em; untuk ukuran yang sama dengan elemen induk, dan font-size: 100%; untuk ukuran yang sama dengan elemen induk</p>
 <p>background-image digunakan untuk menambahkan gambar sebagai background pada html</p>
@@ -158,8 +160,31 @@
 <p>cursor ada pointer, default, wait, help, text, etc. not-allowed</p>
 <p>pseudo class any-link adalah gabungan antara link dan visited</p>
 <p>tree-structural pseudo classes ada :root, :empty, :nth-child(), :nth-of-type(), dan lain-lain</p>
+<P>:first-child digunakan untuk memilih elemen pertama dalam sebuah grup elemen lalu ada :last-child untuk kebalikan dari :first-child</P>
+<p>Menggunakan :only-childpseudo-class memastikan hanya divelemen dengan satu child element yang dipilih</p>
+<p>:nth-child() untuk memilih elemen berdasarkan posisinya dalam grup elemen, contoh: :nth-child(2) untuk memilih elemen kedua, :nth-child(odd) untuk memilih elemen ganjil, dan :nth-child(even) untuk memilih elemen genap</p>
+<p>Functional pseudo-class memungkinkan kamu menyeleksi elemen berdasarkan kondisi atau hubungan yang lebih kompleks. Berbeda dengan pseudo-class biasa yang menargetkan elemen berdasarkan suatu state, misalnya :hover atau :focus, functional pseudo-class menerima argumen di dalam tanda kurung, sehingga disebut "functional pseudo-class".</p>
+<p>Contoh functional pseudo-class yang umum digunakan adalah :not(), :is(), dan :where().</p>
+<p>:is() digunakan untuk mengelompokkan selector agar penulisan CSS lebih ringkas dan mudah dibaca. Pseudo-class ini tetap memiliki specificity normal seperti selector biasa.</p>
+<p>:where() digunakan untuk mengelompokkan beberapa selector agar penulisan CSS lebih ringkas dan mudah dibaca, bedanya dengan :is() pseudo-class ini memiliki specificity 0 sehingga lebih mudah dioverride atau ditimpa pakai gaya lain.</p>
+<p>:has pseudo-class untuk style elemnt parent berdasarkan element childern</p>
+<p>Pseudo-class :not() ini ideal untuk situasi di mana Anda ingin menerapkan gaya ke sekelompok elemen, kecuali satu atau lebih pengecualian spesifik</p>
+<p>mirip pseudo-class ada pseudo element, bedanya pseudo element memilik dua semi-colon (::) dan lebih sering digunakan untuk dekorasi, contoh pseudo element ada before and after</p>
+<p>::before digunakan untuk menambahkan content sebelum sebelum element dan after adalah sebaliknya</p>
+<p>dengan before element content di element akan seperti ini(👌before) dan dengan after element content di element akan seperti ini(after👌)</p>
+<p>transform digunakan untuk perubahan bentuk/animasi pada elemen dan transition untuk untuk animasi perpindahan</p>
+<p>::first-letter pseudo-element digunakan untuk memilih huruf pertama dari sebuah elemen untuk di styling</p>
+<p>::marker digunakan untuk styling bullet pada list items</p>
+<p>selain itu ada pseudo-element lainnya seperti ::selection untuk styling teks yang dipilih, ::placeholder untuk styling placeholder text lalu ::spelling-error</p>
+<p>box-shadow: x y blur spread color</p>
+<p>value umum untuk font-weight: normal, bold, bolder, lighter, bolder lalu ada numeric 100(kecil) 400(norma) 700(bold) dan 900(extra bold)</p>
+<p>font-weight dipakai untuk mengatur ketebalan font, semakin tinggi nilainya maka semakin tebal fontnya</p>
             </article>
         </main>
+        <footer class="article-footer">
+            <hr>
+            <p>Copyright © 2026 Musico. All rights reserved.</p>
+        </footer>
         <script src="index.js" defer></script>
         </body>
 </html>
