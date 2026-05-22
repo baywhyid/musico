@@ -19,8 +19,6 @@
         <button type="button" class="nav-bar-toggle test-button" aria-label="Toggle navigation">
             <span class="hamburger"></span>
         </button>
-        <main class="main-container">
-
         <header>
                 <nav class="nav-bar">
                        <p><a href="index.html" class="home">Home</a></p>
@@ -31,7 +29,7 @@
                 </nav>
             </header>
             <form class="search-nav" onsubmit="return false;" autocomplete="off">
-            <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar">
+            <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar" minlength="3">
             <button type="button" class="search-btn">CARI</button>
         </form>
         <p>home/library/donate/article</p>
@@ -39,10 +37,10 @@
         <div>
         <span>Volume:</span><input type="range" min="0" max="100" value="50">
         </div>
-        <main>
+        <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IiZRPt7q8wk?si=ymqv7Zno_r_nr7O5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <a href="https://youtu.be/IiZRPt7q8wk?si=ymqv7Zno_r_nr7O5" target="_blank">Watch The Video</a>
-        </main>
+        </div>
             <p>
   As Quincy Larson said,
   <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">
@@ -115,12 +113,12 @@ code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
 <input type="radio" id="option2" name="options" value="option2" value="option2" class="form-input-radio-btn">
 <label class="form-label" for="option2">Option 2</label><br>
 <p style="color: red;"> radio buttons harus punya name yang sama supaya jadi 1 pilihan</p>
-<textarea placeholder="tulis komentar kamu disini" rows="4" cols="50"></textarea>
+<textarea placeholder="tulis komentar kamu disini" rows="4" cols="50" class="comment-area"></textarea>
 <form method="post" action="">
     <fieldset>
         <legend>Contact Us</legend>
     <label for="email"> Sign up for our newsletter:</label>
-        <input required type="email" id="email" placeholder="janedoe@gmail.com" minlength="3" maxlength="50" size="20" class="form-input">
+        <input required type="email" id="email" placeholder="janedoe@gmail.com" minlength="3" maxlength="50" size="20" class="form-input-email">
         <button type="submit" class="submit-btn">Submit</button>
 <input type="button" value="INIDIA" onclick="ININIGG()">
 </div>
@@ -143,15 +141,14 @@ code exsperimen ada <a href="lab.html">disini</a> &larr;</a>
             <p>Follow us on social media:</p>
             <div class="logo">
             <a href="https://github.com/baywhyid/" target="_blank">
-           <img src="assets/icon/icons8-github-logo-96.png" alt="github icon" width="50" class="logo-github"></a>
+           <img src="assets/icon/icons8-github-logo-96.png" alt="github icon" width="50" class="logo-github" title="GitHub"></a>
            <a href="/" target="_blank">
-            <img src="assets/icon/icons8-telegram-app-50.png" alt="telegram icon" width="50" class="logo-telegram"></a>
+            <img src="assets/icon/icons8-telegram-app-50.png" alt="telegram icon" width="50" class="logo-telegram" title="Telegram"></a>
             </div>
          <p><a href="about.html" class="contact-about">About Musico</a></p>
         </address>
         </section>
     </div>
-</main>
 <hr>
         <footer class="site-footer">
             <small>

@@ -8,11 +8,11 @@
         <title>musico free audio player</title>
     </head>
     <body class="article-body">
-        <section class="article-header">
         <h1>notes</h1>
         <hr>
-        <p><a href="index.html">Back to Home</a></p>
-        <p>notes dari freecodecamp</p>
+        <p><a href="index.html" class="back-to-home" title="kembali"></a></p>
+        <p class="big-font">Notes dari freecodecamp</p>
+            <section class="article-section">
         <form class="search-nav" onsubmit="return false;" autocomplete="off">
             <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar">
             <button type="button" class="search-btn">CARI</button>
@@ -26,7 +26,7 @@
         <p><a href="index.html">home</a>/<span>article</span></p>
         </section>
         <hr>
-        <main>
+        <main class="article-main">
             <h2 class="hiasan-aja">HTML, <span class="css-text">CSS Syntax</span></h2>
            <article id="article-content" class="article-content">
             <p class="article-paragraph">Dibawah ini adalah sedikit catatan yang saya pelajari tentang pemrograman web</p>
@@ -179,6 +179,29 @@
 <p>box-shadow: x y blur spread color</p>
 <p>value umum untuk font-weight: normal, bold, bolder, lighter, bolder lalu ada numeric 100(kecil) 400(norma) 700(bold) dan 900(extra bold)</p>
 <p>font-weight dipakai untuk mengatur ketebalan font, semakin tinggi nilainya maka semakin tebal fontnya</p>
+<p>:focus-within dipakai untuk memilih parent ketika ada child di dalamnya yang sedang difocus</p>
+<p>input pseudo class digunakan untuk menargetkan elemen input di html berdasarkan keadaan element tersebut sebelum atau sesudah interaksi pengguna</p>
+<p>contoh input pseudo-class ada :valid, :invalid, :required, :optional :enabled, :disabled :checked :autofill :in-range :out-of-range</p>
+<p>:first-child → memilih child pertama, :last-child → memilih child terakhir, :nth-child() → memilih child berdasarkan urutan, :nth-last-child() → memilih child berdasarkan urutan dari belakang</p>
+<p>colors/warna bisa diklasifikasikan menjadi tiga jenis yaitu primary, secondary, dan tertiary</p>
+<p>title digunakan untuk memberikan informasi tambahan tentang elemen, biasanya ditampilkan sebagai tooltip saat pengguna mengarahkan kursor ke elemen tersebut</p>
+<p>letakan title dihtml dimana class dan element lain diletakan</p>
+<P> RGB stand for red, green, blue. di css rgb bisa digunakan dengan format color:rgb(red, green, blue).</P>
+<p> rgb(0, 0, 0) berati 0 red 0 green 0 blue, yang artinya warna menjadi hitam, jika semua nilainya 255 maka warna menjadi putih, dan jika hanya satu nilai misal rgb(255, 0, 0) maka warna menjadi merah</p>
+<p>Lalu ada RGBA yang merupakan versi dari RGB dengan tambahan alpha diakhir untuk mengatur transparansi, dengan 0 berarti benar-benar transparan dan 1 berarti benar-benar padat/jelas terlihat</p>
+<p>HSL stand for hue, saturation, lightness. di css HSL bisa digunakan dengan format color:hsl(hue, saturation, lightness).</p>
+<p>hue adalah warna yang diwakili dalam derajat pada roda warna, dengan 0 atau 360 untuk merah, 120 untuk hijau, dan 240 untuk biru. saturation adalah intensitas warna, dengan 0% untuk abu-abu dan 100% untuk warna penuh. lightness adalah kecerahan warna, dengan 0% untuk hitam, 50% untuk warna normal, dan 100% untuk putih</p>
+<p>lalu ada hsla yang merupakan versi dari HSL dengan tambahan alpha diakhir untuk mengatur transparansi, dengan 0 berarti benar-benar transparan dan 1 berarti benar-benar padat/jelas terlihat</p>
+<p>HEX code diawali #RRGGBB dan memiliki panjang 6 karakter</p>
+<p>Value hex code dimulai dari 0 hingga F, yaitu 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F yang menunjukkan tingkat ke gelapan warna tersebut, di mana 0 berarti paling gelap dan F berarti paling terang atau maksimal. </p>
+<p>jadi jika kita mengatur #000000 warna akan menjadi hitam karena tidak ada ligtness dan #FFFFFF Maka warna akan menjadi putih karena intensitas cahaya dari semua warna disatukan</P>
+<p>hex code bisa disingkat jika memiliki valu yang sama, contohnya #00ff00 bisa disingkat menjadi #0f0</p>
+<p>dalam satu element bisa ada 2 class yang dipisahkan dalam space/spasi seperti &lt;div class="class1 class2"&gt;</p>
+<p>lalu meskipun ada 2 class kamu bisa targetin satu satu, contohnya class 1 untuk margin, padding atau height dan class 2 untuk background color</p>
+<p>warna hitam/putih terlalu silau sehingga membuat mata menjadi cepat lelah, untuk penggantinya kalian bisa menggunakan lightgray atau darkgray</p>
+<p>opacity digunakan untuk mengatur tingkat transparansi dari suatu elemen</p>
+<p>nilai opacity berkisar antara 0 hingga 1, dengan 0 berarti elemen benar-benar transparan dan 1 berarti elemen benar-benar padat atau tidak transparan sama sekali</p>
+
             </article>
         </main>
         <footer class="article-footer">

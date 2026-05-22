@@ -70,6 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // === NAVIGASI HIGHLIGHT PAKAI KEYBOARD ===
+  document.addEventListener('keydown', function(e) {
+    if (!searchMarks.length) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      goToMark(searchCurrent + 1);
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      goToMark(searchCurrent - 1);
+    }
+  });
+
 });
 
 let originalNodes = [];
@@ -147,7 +160,8 @@ function doSearch() {
     }
   }
 
-  walkAndHighlight(document.body);
+  const target = document.getElementById('article-content') || document.body;
+  walkAndHighlight(target);
 
   searchMarks = Array.from(document.querySelectorAll('mark.search-highlight'));
 
