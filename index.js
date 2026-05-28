@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const backToTop = document.createElement('button');
   backToTop.id = 'back-to-top';
-  backToTop.textContent = '↑ Balik ke atas';
+  backToTop.textContent = '↑';
   backToTop.setAttribute('aria-label', 'Kembali ke atas');
   document.body.appendChild(backToTop);
 

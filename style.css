@@ -112,8 +112,12 @@ fieldset {
   border: 2px solid black;
 
 }
+.nav-bar {
+  display: flex;
+  margin: 20px 0 30px 0;
+  gap: 10px;
+}
 .home, .article, .galeri, .donate {
-  display: block;
   background-color: gray;
   padding: 10px;
   border-radius: 15px;
@@ -122,6 +126,11 @@ fieldset {
   text-decoration: none;
   margin-bottom: 5px;
   border: solid 1px #000000;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+button {
+  cursor: pointer;
 }
 :is(.home, .article, .galeri, .donate):visited {
   text-decoration: none;
@@ -456,7 +465,7 @@ mark.search-highlight-active {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.form-input-email {
+input[type="email"] {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -484,6 +493,8 @@ mark.search-highlight-active {
   border: none;
   outline: none;
   height: 130px;
+  box-sizing: border-box;
+  resize: none;
 }
 .has-lab:has(p) {
   background-color: red;
@@ -511,6 +522,8 @@ mark.search-highlight-active {
   width: 250px;
   height: 25px;
   margin-top: 20px;
+  border-top-width: 10px;
+  box-shadow: -5px 5px red;
 }
 .colorist {
   background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
@@ -541,9 +554,33 @@ mark.search-highlight-active {
   margin-left: 2rem;
 }
 .big-font {
-  font-size: 20px;
+  text-align: center;
+  font-size: 1.5rem;
   color: #e0e0e0;
   font-family: Arial, sans-serif;
   border: 2px solid #333;
   padding: 5px 5px 5px 5px;
+}
+.highlight-text {
+  background-color: rgb(0, 220, 0);
+  color: #1A1A1A;
+}
+.checktest {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #555;
+  vertical-align: middle;
+  position: relative;
+}
+.checktest:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+.checktest:checked::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  transform: translate(2px, -2px);
 }
