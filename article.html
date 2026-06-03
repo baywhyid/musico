@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <title>musico free audio player</title>
     </head>
     <body class="article-body">
-        <h1>notes</h1>
+        <h1 class="first-title">notes</h1>
         <hr>
-        <p><a href="index.html" class="back-to-home" title="kembali"></a></p>
+        <div class="container">
         <p class="big-font">Notes dari freecodecamp</p>
+        <div class="back-to-home-container">
+        <p><a href="index.html" class="back-to-home" title="kembali"></a></p>
+        </div>
             <section class="article-section">
         <form class="search-nav" onsubmit="return false;" autocomplete="off">
             <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar">
@@ -25,11 +28,13 @@
         <p>dibawah adalah contoh breadcumbs</p>
         <p><a href="index.html">home</a>/<span>article</span></p>
         </section>
+        </div>
         <hr>
         <main class="article-main">
             <h2 class="hiasan-aja">HTML, <span class="css-text">CSS Syntax</span></h2>
            <article id="article-content" class="article-content">
             <p class="article-paragraph">Dibawah ini adalah sedikit catatan yang saya pelajari tentang pemrograman web</p>
+            <p>Horizontal berarti dari kiri ke kanan atau sebaliknya atau menyamping (--- ), sedangkan vertical berarti dari atas ke bawah atau sebaliknya (|)</p>
             <p>&lt;abbr&gt untuk singkatan</p>
              <p>&lt;address&gt untuk informasi kontak</p>
              <p>&lt;area&gt untuk area pada image map</p>
@@ -52,7 +57,7 @@
              <p>
             stage input ada disbled untuk menonaktifkan input readonly untuk membaca saja focused untuk menandai input yang sedang diinteraksi dan default untuk input yang normal atau bawaan
             &lt;ruby&gt untuk anotasi ruby &lt;ruby&gt 明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; &lt;/ruby&gt; hasilnya <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby></p>
-            <p>input type terdiri dari: text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button</p>
+            <p>input type terdiri dari: text, password, email, url, tel, number, date, time, checkbox, radio, file, submit, reset, button</p>
             <p> id untuk memberikan identifier unik pada elemen</p>
             <p> &lt;button&gt; memiliki type submit, reset, dan button</p>
             <p> submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa</p>
@@ -75,7 +80,12 @@
 <p>&lt;button onclick="this.parentElement.close()"&gt;Close&lt;/button &gt;</p>
 <p>fungsi &lt;aside&gt; untuk konten sampingan atau iklan yang bukan bagian konten utama, contoh: &lt;aside&gt;</p>
 <p>&lt;h2&gt;Related Links&lt;/h2&gt;</p>
-<p>type input ada banyak, seperti text, password, email, url, number, date, time, checkbox, radio, file, submit, reset, button, range.</p>
+<p>input type terdiri dari text/default, lalu password untuk menyebukan teks yang diketik, email untuk memvalidasi alamat email, number khusus angka dilengkapi anak panah, tel untuk nomor telepon, search untuk pencarian, url untuk memvalidasi alamat situs web yang valid</p>
+<p>lalu ada input untuk tanggal dan waktu yang terdiri dari date menampilkan kalender untuk memilih tanggal, month pemilih bulan dan tahun, week pemilih minggu dalam setahun, datetime-local gabungan kalender dan jam</p>
+<p>lalu ada input pilihan atau selection yang terdiri dari checkbox untuk kotak centang yang memungkinkan user memilih lebih dari satu opsi, dan Tombol bulat, dan radio hanya bisa memilih satu opsi dari beberapa pilihan</p>
+<p>input berkas dan media terdiri dari <code>file</code>: Tombol untuk mengunggah atau memilih file dari perangkat, color: Menampilkan color picker (palet warna visual), image: Tombol submit yang menggunakan gambar khusus.</p>
+<p>range untuk membuat slider, button untuk tombol biasa yang bisa diprogram untuk js, submit untuk mengirimkan formulir dan reset untuk mereset formulir</p>
+<p>terakhir ada hidden: Elemen yang tidak terlihat di layar, biasa digunakan untuk menyimpan data tersembunyi (misal: ID unik) yang ikut dikirim saat submit formulir</p>
 <p>aria adalah atribut untuk memberikan informasi tambahan tentang elemen kepada assistive technologies, contoh: &lt;div role="button" aria-label="Click me"&gt;Button&lt;/div&gt;</p>
 <p>&lt;button&gt; memiliki type submit, reset, dan button. submit untuk mengirimkan formulir, reset untuk mereset formulir, dan button untuk tombol biasa. contoh: &lt;button type="submit"&gt;Submit&lt;/button&gt; default untuk button tanpa type adalah "submit" jadi jika kita buat &lt;button&gt;Submit&lt;/button&gt; maka itu sama dengan &lt;button type="submit"&gt;Submit&lt;/button&gt;</p>
 <p>inline elements yang nempel dalam satu baris seperti ini teks <span>inline</span> lanjut lagi</p>
@@ -198,7 +208,7 @@
 <p>hex code bisa disingkat jika memiliki valu yang sama, contohnya #00ff00 bisa disingkat menjadi #0f0</p>
 <p>dalam satu element bisa ada 2 class yang dipisahkan dalam space/spasi seperti &lt;div class="class1 class2"&gt;</p>
 <p>lalu meskipun ada 2 class kamu bisa targetin satu satu, contohnya class 1 untuk margin, padding atau height dan class 2 untuk background color</p>
-<p>warna hitam/putih terlalu silau sehingga membuat mata menjadi cepat lelah, untuk penggantinya kalian bisa menggunakan lightgray atau darkgray</p>
+<p>alternatif warna hitam/putih terlalu silau sehingga membuat mata menjadi cepat lelah, untuk penggantinya kalian bisa menggunakan #F5F6F7 untuk alternatif putih dan #2f363d atau darkgray</p>
 <p>opacity digunakan untuk mengatur tingkat transparansi dari suatu elemen</p>
 <p>nilai opacity berkisar antara 0 hingga 1, dengan 0 berarti elemen benar-benar transparan dan 1 berarti elemen benar-benar padat atau tidak transparan sama sekali</p>
 <p>default display untuk div adalah block</p>
@@ -211,7 +221,13 @@
 <p>dan ada spreadRadius untuk expand shadow semakin lebar</p>
 <p>untuk targetin input selain pakai class dan id bisa menggunakan <span class="highlight-text">input[type="jenis input"]</span></p>
 <p>resize untuk mengatur apakah pengguna dapat mengubah ukuran suatu element atau tidak, value untuk resize ada none untuk tidak bisa diubah ukurannya, both untuk bisa diubah ukurannya secara horizontal dan vertikal, horizontal untuk hanya bisa diubah ukurannya secara horizontal, vertical untuk hanya bisa diubah ukurannya secara vertikal</p>
-
+<p>translate digunakan untuk menggeser posisi element tanpa ubah posisi aslinya, rumusan translate adalah translate(x, y) dengan x untuk menggeser secara horizontal dan y untuk menggeser secara vertikal, contoh: transform: translate(50px, 100px); untuk menggeser element 50px ke kanan dan 100px ke bawah</p>
+<p>di input type password terdapat attribute pattern yang bisa digunakan untuk memvalidasi format input contoh pattern="[A-Za-z]{8,10} dimana [ ] untuk menentukan karakter yang diterima dan { } untuk menentukan min/max length</p>
+<p>gunakan name attribute pada input radio untuk mengelompokkan radio button agar hanya bisa dipilih satu</p>
+<p>gunakan overflow-x: hidden; atau overflow-y: hidden; untuk mengontrol perilaku overflow pada bar horizontal atau vertikal supaya tidak muncul scrollbar</p>
+<p>body bawaan memiliki padding dan margin yang dapat memengaruhi tampilan elemen, reset agar web layout tetap konsisten di berbagai browser dan untuk kemudahan pengembangan</p>
+<p>gunakan unset untuk mengembalikan properti ke nilai defaultnya, contoh: margin: unset; untuk mengembalikan margin ke nilai defaultnya</p>
+<p>vertical-align bisa digunakan jika suatu text dielement checkbox tidak sejajar, value vertical-align yang umum digunakan adalah top, middle, dan bottom</p>
             </article>
         </main>
         <footer class="article-footer">
