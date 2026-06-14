@@ -186,7 +186,6 @@
 <p>::first-letter pseudo-element digunakan untuk memilih huruf pertama dari sebuah elemen untuk di styling</p>
 <p>::marker digunakan untuk styling bullet pada list items</p>
 <p>selain itu ada pseudo-element lainnya seperti ::selection untuk styling teks yang dipilih, ::placeholder untuk styling placeholder text lalu ::spelling-error</p>
-<p>box-shadow: x y blur spread color</p>
 <p>value umum untuk font-weight: normal, bold, bolder, lighter, bolder lalu ada numeric 100(kecil) 400(norma) 700(bold) dan 900(extra bold)</p>
 <p>font-weight dipakai untuk mengatur ketebalan font, semakin tinggi nilainya maka semakin tebal fontnya</p>
 <p>:focus-within dipakai untuk memilih parent ketika ada child di dalamnya yang sedang difocus</p>
@@ -215,6 +214,8 @@
 <p>ketika 2 block element bersebelahan keduanya bertumpuk seperti balok/block sungguhan</p>
 <p>untuk memposisikan 2 div dalam satu line, set propertinya ke inline-block</p>
 <p>border bisa diatur dalam 1 properti seperti border-left-width: 10px</p>
+<p>box-shadow: x y blur spread color</p>
+<p>spread adalah</p>
 <p>dalam box-shadow positive offsetX menggeser shadow ke kanan dan negative value menggeser ke kiri</p>
 <p>lalu ada positive offsetY yang akan menggeser value ke bawah dan negative offsetY yang menggeser bayangan ke atas</p>
 <p>lalu ada blurRadius untuk efek bluring di box-shadow, semakin tinggi blueradius valueny akan semakin blur</p>
@@ -228,6 +229,44 @@
 <p>body bawaan memiliki padding dan margin yang dapat memengaruhi tampilan elemen, reset agar web layout tetap konsisten di berbagai browser dan untuk kemudahan pengembangan</p>
 <p>gunakan unset untuk mengembalikan properti ke nilai defaultnya, contoh: margin: unset; untuk mengembalikan margin ke nilai defaultnya</p>
 <p>vertical-align bisa digunakan jika suatu text dielement checkbox tidak sejajar, value vertical-align yang umum digunakan adalah top, middle, dan bottom</p>
+<p>overflow digunakan untuk mengontrol jika suatu element melebihi ukuran yang ditentukan atau keluar element, nila overflow y untuk vertical atau atas kebawah dan x untuk horizontal atau menyamping</p>
+<p>overflow hidden digunakan untuk menyembunyikan isi element jika telah melebihi batas tinggi atau ukuran parent</p>
+<p>overflow bisa dipakai shorthand, jika hanya ada 1 value maka akan diterapkan ke semua sisi, jika ada 2 value maka yang pertama diterapkan ke sisi vertikal/x dan yang kedua ke sisi horizontal/y</p>
+<p>lalu overflow scroll digunakan jika isi element melebihi ukuran parent dan ingin menampilkan scrollbar agar bisa di-scroll, kita bisa biarkan browser yang mengelola scrollbar tersebut dengan mengganti value menjadi auto</p>
+<p>Nilai X berarti horizontal atau menyamping dan Y vertical atau atas kebawah</p>
+<p>lalu ada value - (minus) yang digunakan untuk membalikan arah default, contohnya jika umumnya menggeser ke kanan, dengan nilai negatif akan menggeser ke kiri</p>
+<p>rotate digunakan untuk memutar element, nilai ini menggunakan derajat (deg) sebagai unitnya, contoh: transform: rotate(45deg); untuk memutar element 45 derajat ke arah searah jarum jam</p>
+<p>scale digunakan untuk mengubah ukuran element, nilai ini menggunakan faktor skala, contoh: transform: scale(1.5); untuk mengubah ukuran element menjadi 1.5 kali lipat dari ukuran aslinya</p>
+<p>skew digunakan untuk memiringkan element, nilai ini menggunakan derajat (deg) sebagai unitnya, contoh: transform: skew(30deg, 15deg); untuk memiringkan element 30 derajat secara horizontal dan 15 derajat secara vertikal</p>
+<p>kamu bisa menggabungkan multiple transform menjadi single declaration, contoh: transform: translate(50px, 100px) rotate(45deg) scale(1.5);</p>
+<p>Jika kamu menghilangkan suatu nilai, properti default dari nilai tersebut akan digunakan. Itu berlaku untuk width, none untuk style, dan currentcolor untuk warna.</p>
+<p>kamu dapat mengatur ketiga properti ini secara langsung di border shorthand jika kamu ingin semua sisi persis sama. Tetapi jika Anda ingin menetapkan gaya yang berbeda untuk setiap sisi, Anda dapat menggunakan properti border-width, border-styledan border-color</p>
+
+<p><code>border-width: 2px 4px 7px 12px;
+border-style: dashed solid solid dashed;
+border-color: blue red green black;</code></p>
+<p>setiap value bergerak sesuai arah jarum jam, mulai dari atas, kanan, bawah, dan kiri</p>
+<p>jika margin top dan bottom bersebelahan browser hanya akan mengambil nilai dari salah satu dari mereka yang memiliki nilai lebih besar, ini dinamakan margin collapse</p>
+<p>margin collapse tidak berlaku untuk sisi kiri dan kanan</p>
+<p>ada dua jenis box-sizing yaitu content-box dan border-box, content box ada defaultny dari box-sizing</p>
+<p>bedanya content-box dan border-box adalah content-box menghitung total ukuran element termasuk padding dan border sehingga ukuran untuk element melebar, sedangkan border-box hanya menghitung berdasarkan mengikuti ukuran dari width total</p>
+<p>semua element memiliki default margin dan padding di setiap browser, dan kadang berbeda ditiap browser menjadikan styling menjadi tidak konsisten, gunakan CSS reset di-awal untuk mengatasi hal ini.</p>
+<p>kamu juga bisa menggunakan css reset thirdparty seperti Normalize.css dan sanitize.css, install dengan <code>npm install normalize.css</code> atau <code>npm install sanitize.css lalu</code> <code>@import "normalize.css";</code></p>
+<p>filter properti digunakan untuk memodfikasi tampilan element secara visual tanpa mengubah assets asli, seperti menambahkan efek blur, brightness, atau kontras.</p>
+<p>function dari filter ada blur, brightness untuk mengatur terang, contrast , grayscale untuk efek hitam-putih, sepia efek vintage look, saturate mengatur intensitas warna, hue-rotate, invert membalik warna, opacity mengatur transparansi, drop-shadow bayangan mengikuti bentuk elemen</p>
+<p>filter properti bisa dikombinasikan untuk beberapa efek seperti <code>filter: blur(5px) brightness(1.2) contrast(1.5);</code></p>
+<p>border-radius bisa menerima 4 value, top-left, top-right, bottom-right, bottom-left atau searah dengan jarum jam</p>
+<p>jika ada dua value, yang pertama untuk top-left dan bottom-right, yang kedua untuk top-right dan bottom-left mengikuti arah jarum jam</p>
+<p>flex-direction digunakan untuk mengatur arah dari flex items dalam container flex, defaultnya adalah flex-direction: row; untuk mengatur item secara horizontal dari kiri ke kanan, lalu ada row-reverse untuk mengatur item secara horizontal dari kanan ke kiri</p>
+<p>selain row dan row-reverse, ada juga column yang digunakan untuk mengatur item secara vertikal dari atas ke bawah, dan column-reverse untuk mengatur item secara vertikal dari bawah ke atas</p>
+<p>reverse artinya pembalikan, jika umumnya ada angka default 1 2 3 4, maka reverse akan mengubah urutannya menjadi 4 3 2 1, sama seperti - (minus)</p>
+<p>flex-flow adalah shorthand untuk mengatur flex-direction dan flex-wrap secara bersamaan</p>
+<p>flex-wrap terdiri dari nowarp, warp dan warp-reverse, nowarp ada defaultnya</p>
+<p>di flexbox justify-content digunakan untuk mengatur penyebaran flex items, value nya terdiri dari flex-start, center, flex-end, space-between, dan space-around</p>
+<p>space-between menambahkan ruang ditengah2 flex items, sedangkan space-around persis seperti space-between hanya saja ada space tambahan di awal dan akhir flex item, space-evenly membagi ruang secara merata di antara flex items</p>
+<p>align-items digunakan untuk mengatur dimana flex item akan diletakan, valuenya ada flex-start, center, flex-end, stretch</p>
+<p>align-self adalah versi individual dari align-items, selalu bekerja di cross axis atau vertical axis</p>
+<p>&amp;amp adalah simbol untuk (&) digunakan untuk menggunakan html entities </p>
             </article>
         </main>
         <footer class="article-footer">

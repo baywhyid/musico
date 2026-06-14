@@ -1,17 +1,26 @@
+*::before, *::after {
+  box-sizing: border-box;
+}
 body {
   background: rgba(0, 0, 0, 0.88);
   font-family: sans-serif, arial;
   color: #f5f6f7;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 .container {
+  max-width: 1200px;
+  margin: auto;
+}
+.child-container {
   position: relative;
   padding: 0 1rem 0 1rem;
-  font-size: 1.1rem
+  font-size: 1.1rem;
+  background-color: #333;
+  margin: 10px;
+  padding: 1px 10px 5px 10px;
+  border-radius: 25px;
 }
 p {
   font-size: 17px;
@@ -99,11 +108,16 @@ fieldset {
   list-style-position: inside;
 }
 .testradial {
-  background-color: #0f1117;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
+  background:
+    radial-gradient(
+      ellipse 120% 70% at top center,
+      rgba(59,130,246,.4) 0%,
+      rgba(59,130,246,.2) 35%,
+      rgba(59,130,246,.08) 60%,
+      rgba(59,130,246,.02) 85%,
+      transparent 100%
+    ),
+    #0f1115;
 }
 .figure-image>img {
   border: 2px solid green;
@@ -122,8 +136,10 @@ fieldset {
 }
 .nav-bar {
   display: flex;
+  flex-direction: row;
   margin: 20px 0 30px 0;
-  gap: 10px;
+  gap: 5px;
+  justify-content: space-around;
 }
 .home, .article, .galeri, .donate {
   background-color: gray;
@@ -203,6 +219,7 @@ button {
   color: white;
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
+  rotate: 180deg;
   
 }
 .btn-dialog::before {
@@ -328,7 +345,7 @@ mark.search-highlight-active {
   background: #374151;
   color: #fff;
   border: 1px solid #0a0a23;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
   opacity: 0;
@@ -442,7 +459,8 @@ mark.search-highlight-active {
   height: 20px;
   border-radius: 100%;
   border: 2px solid gray;
-  vertical-align: bottom;
+  vertical-align: middle;
+  position: relative;
 }
 .form-input-radio-btn::before {
  display: block;
@@ -455,7 +473,7 @@ mark.search-highlight-active {
 }
 .form-input-radio-btn:checked::before {
   background-color: lightgreen;
-  transform: translate(3px, 3px) scale(1)
+  transform: translate(3.5px, 3px) scale(1)
 }
 .form-option-rating {
   background-color: #333;
@@ -554,6 +572,7 @@ input[type="email"] {
   border: 2px solid #111;
 }
 .back-to-home-container {
+  margin-left: 1rem;
 }
 .back-to-home:is(:hover, :visited) {
   color: #111;
@@ -623,7 +642,9 @@ input[type="email"] {
   background-color: #333;
 }
 .site-footer {
-  background-color: black;
+  background-color: #0f0f0f;
+  margin: 0;
+  padding: 2px;
 }
 .inline {
   vertical-align: top;
@@ -632,4 +653,92 @@ input[type="email"] {
   display: flex;
   justify-content: flex-start;
   margin: 0 30px;
+}
+.overflow-scroll {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #333;
+  border-radius: 10px;  
+  color: green;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+.overflow-scroll::-webkit-scrollbar {
+  display: none;
+}
+.box-content {
+  width: 200px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+
+}
+.red {
+  background-color: red;
+  box-sizing: border-box;
+  filter: blur(2px);
+}
+.blue {
+  background-color: blue;
+  box-sizing: content-box;
+}
+.flex-test {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+  margin: 20px;
+}
+.flex-item {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+}
+.vertical {
+  flex-direction: column-reverse;
+}
+.justify-end {
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.title-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger-menu {
+  margin-right: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #F5F6F7;
+}
+.hamburger-menu:hover, .hamburger-menu:visited {
+  text-decoration: none;
+  color: #F5F6F7;
+}
+.html-entities {
+  background-color: #161b22;
+  padding: 5px;
+  border-radius: 10px;
+}
+.blur-test {
+  filter: blur(5px);
+  margin: 20px;
+}
+.background-quote {
+  background-color: #444;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.background-quote::before {
+  content: "“";
+  transform: translate(-10px, -10px);
+  position: absolute;
+  font-size: 2rem;
+  color: #aaa;
 }
