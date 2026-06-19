@@ -102,8 +102,8 @@
 <p>margin untuk jarak di luar border, jenis margin ada margin-top, margin-right, margin-bottom, margin-left</p>
 <p>gunakan hanya &lt;margin&gt; di css untuk memberikan jarak yang sama di semua sisi, contoh: margin: 10px; maka setiap sisi akan memiliki margin 10px, jika ada 2 value seperti margin: 10px 20px; maka value awal untuk margin-top dan bottom dan value kedua untuk margin-right dan left, jika ada 4 value seperti margin: 10px 20px 30px 40px; maka value pertama untuk margin-top, value kedua untuk margin-right, value ketiga untuk margin-bottom, dan value keempat untuk margin-left</p>
 <p>mirip dengan margin, padding digunakan mirip seperti margin, bedanya ini untuk didalam elemtn/border</p>
-<p>text-align untuk buat ngatur posisis teks secara horizontal</p>
-<p>text-align digunakan untuk mengatur posisiteks di css</p>
+<p>text-align untuk buat ngatur posisis teks secara dimana dia akan dimulai</p>
+<p>valuenya ada <code>text-align: left</code>yang berarti text akan diratakan atau diletakan di sisi kiri, lalu ada right, center untuk diletakan ditengah dan justify dimana teks akan rata atau nempel dikiri dan kanan</p>
 <p>display di css</p>
 <p>gunakan ,/coma untuk menghubungkan class yang sama di css contoh: .class1, .class2 { color: red; }</p>
 <p>inherit untuk warna supaya ngikut warna parent element</p>
@@ -260,6 +260,7 @@ border-color: blue red green black;</code></p>
 <p>flex-direction digunakan untuk mengatur arah dari flex items dalam container flex, defaultnya adalah flex-direction: row; untuk mengatur item secara horizontal dari kiri ke kanan, lalu ada row-reverse untuk mengatur item secara horizontal dari kanan ke kiri</p>
 <p>selain row dan row-reverse, ada juga column yang digunakan untuk mengatur item secara vertikal dari atas ke bawah, dan column-reverse untuk mengatur item secara vertikal dari bawah ke atas</p>
 <p>reverse artinya pembalikan, jika umumnya ada angka default 1 2 3 4, maka reverse akan mengubah urutannya menjadi 4 3 2 1, sama seperti - (minus)</p>
+<p>flex-wrap digunakan untuk menentukan apakah flex-items bisa turun ke baris selanjutnya saat ruang habis</p>
 <p>flex-flow adalah shorthand untuk mengatur flex-direction dan flex-wrap secara bersamaan</p>
 <p>flex-wrap terdiri dari nowarp, warp dan warp-reverse, nowarp ada defaultnya</p>
 <p>di flexbox justify-content digunakan untuk mengatur penyebaran flex items, value nya terdiri dari flex-start, center, flex-end, space-between, dan space-around</p>
@@ -267,6 +268,12 @@ border-color: blue red green black;</code></p>
 <p>align-items digunakan untuk mengatur dimana flex item akan diletakan, valuenya ada flex-start, center, flex-end, stretch</p>
 <p>align-self adalah versi individual dari align-items, selalu bekerja di cross axis atau vertical axis</p>
 <p>&amp;amp adalah simbol untuk (&) digunakan untuk menggunakan html entities </p>
+<p>text-align digunakan untuk mengatur dimana text akan diletakan</p>
+<p>main axis adalah arah utama diflexbox, jika kamu set flex-direction row maka main adalah horizontal dan vertical adalah cross, sebaliknya jika set flex-direction column maka main axis adalah vertical dan horizontal adalah cross</p>
+<p>justify digunakan untuk mengatur main axis dan aligns items akan mengatur cross axis</p>
+<p>perbedaan antara align-item dan align-content adalah </p>
+<p>di css gradient dianggap sebagai gambar, maka dari itu tag seperti <code>&lt;h1&gt;</code> <code>&lt;p&gt;</code> tidak akan bisa menggunakan linear gradient secara langsung</p>
+<p>ini adalah cara menggunakan gradient di tag, gunakan gradient sebagai background, lalu buat text menjadi transparan agar warna text sesuai warna background, lalu gunakan <code>-webkit-background-clip</code> agar warna dari background tadi hanya berlaku di text</p>
             </article>
         </main>
         <footer class="article-footer">
