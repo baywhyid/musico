@@ -1,12 +1,9 @@
 html {
   scroll-behavior: smooth;
-
+  -webkit-tap-highlight-color: transparent;
 }
 *::before, *::after {
   box-sizing: border-box;
-}
-html::-webkit-scrollbar {
-  display: none;
 }
 body {
   background: rgba(0, 0, 0, 0.88);
@@ -719,6 +716,9 @@ input[type="email"] {
 .vertical {
   flex-direction: column-reverse;
 }
+.ordervert {
+  order: 3;
+}
 .justify-end {
   justify-content: center;
   flex-direction: row-reverse;
@@ -765,4 +765,30 @@ input[type="email"] {
   flex-direction: row;
   align-items: flex-start;
   gap: 0.5rem;
+}
+.flex-properties {
+  max-width: 350px;
+  border: 1px solid white;
+  height: 90px;
+  display: flex;
+  gap: 10px;;
+  resize: horizontal;
+  overflow: auto;
+  margin: 10px;
+}
+.box-test {
+  background-color: greenyellow;
+  height: 80px;
+  flex: 1 1 0;
+}
+.flex-shrink {
+  display: flex;
+  width: 200px;
+  gap: 10px;
+  border: 1px solid white;
+}
+.labbox {
+  background-color: red;
+  height: 80px;
+  width: 40px;
 }
