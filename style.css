@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com');
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
@@ -40,7 +41,7 @@ p {
   font-family: poppins;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   margin: 0 0 0 10px;
   text-transform: uppercase;
 }
@@ -165,10 +166,11 @@ fieldset {
   width: 80px;
   color: black;
   text-decoration: none;
-  margin-bottom: 5px;
+  margin: 0 10px 5px 10px;
   border: solid 1px #000000;
   font-size: 1.2rem;
   font-weight: 500;
+  flex: 0 1 auto;
 }
 button {
   cursor: pointer;
@@ -187,11 +189,12 @@ button {
   background-color: transparent;
   color: white;
   border: 1px solid #444;
-  border-right: none;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
   font-size: 16px;
   outline: none;
   transition: border-color 0.2s;
+  margin: 0 10px 0 10px;
+  width: 100%;
 }
 .search-bar::placeholder {
   color: #aaa;
@@ -294,24 +297,14 @@ button {
   color: #aaa;
   font-style: italic;
 }
-.search-btn {
-   padding: 10px 18px;
-  background-color: #333;
-  color: white;
-  border: 1px solid #444;
-  border-left: none;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.2s;
-  white-space: nowrap;
-}
 .search-nav {
   position: relative;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  width: 100%;
+  align-self: stretch;
 }
 .article-content>p {
   font-size: 17px;
