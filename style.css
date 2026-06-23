@@ -15,7 +15,7 @@ body {
   padding: 0;
 }
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 h1 {
@@ -163,7 +163,7 @@ fieldset {
   background-color: gray;
   padding: 10px;
   border-radius: 10px;
-  width: 80px;
+  width: fit-content;
   color: black;
   text-decoration: none;
   margin: 0 10px 5px 10px;
@@ -171,6 +171,11 @@ fieldset {
   font-size: 1.2rem;
   font-weight: 500;
   flex: 0 1 auto;
+}
+:is(.home, .article, .galeri, .donate) img {
+  width: clamp(1.5rem, 2rem, 2.5rem);
+  height: 1.8rem;
+  filter: brightness(0);
 }
 button {
   cursor: pointer;
@@ -382,13 +387,12 @@ mark.search-highlight-active {
   position: relative;
   flex: 1;
   display: flex;
-  max-width: 500px;
 }
 .search-clear-btn {
   position: absolute;
   right: 8px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   background: none;
   border: none;
   color: #aaa;
@@ -455,6 +459,7 @@ mark.search-highlight-active {
 .card {
   background-color: #2a5298;
   color: white;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   padding: 20px;
   border-radius: 10px;
@@ -664,13 +669,14 @@ input[type="email"] {
   margin: 0 30px;
 }
 .overflow-scroll {
+  background-color: #000000;
   height: 300px;
   overflow-y: scroll;
   border: 1px solid #333;
   border-radius: 10px;  
   color: green;
   max-width: 1000px;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
 }
 .overflow-scroll::-webkit-scrollbar {
