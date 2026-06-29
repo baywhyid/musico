@@ -1,3 +1,7 @@
+@font-face {
+  font-family: plus-jakarta-sans;
+  src: url("assets/font/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
 body {
   background: #0d1117;
   font-family: sans-serif, arial;
@@ -30,7 +34,7 @@ h1 {
 p {
   font-size: 17px;
   line-height: 1.5;
-  font-family: Lato, poppins;
+  font-family: Inter, poppins, Latto, sans-serif;
 }
 h1 {
   font-size: 2.1rem;
@@ -669,6 +673,9 @@ input[type="email"] {
   max-width: 1000px;
   margin: 10px auto;
   padding: 10px;
+}
+.overflow-scroll p {
+  font-family: plus-jakarta-sans;
 }
 .overflow-scroll::-webkit-scrollbar {
   display: none;
