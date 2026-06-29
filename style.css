@@ -3,7 +3,7 @@
   src: url("assets/font/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
 }
 body {
-  background: #0d1117;
+  background: #0f0f0f;
   font-family: sans-serif, arial;
   color: #f5f6f7;
   overflow-x: hidden;
@@ -55,9 +55,9 @@ a:visited {
 }
 :is(.home, .article, .galeri, .donate):hover {
   text-decoration: none;
-  border: solid 1px #000000;
-  color: black;
-  background-color: #a0c19c;
+  color: gray;
+  background-color: RGB(45, 45, 45);
+  border-radius: 10px;
 }
 :is(.home, .article, .galeri, .donate):active {
   transform: scale(0.95);
@@ -148,37 +148,33 @@ fieldset {
 
 }
 .nav-bar {
+  
   display: flex;
   flex-direction: row;
+  background-color: RGB(27, 27, 29);
   margin: 20px 0 30px 0;
   gap: 5px;
   justify-content: space-between;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0 10px 0 10px;
 }
 .home, .article, .galeri, .donate {
-  background-color: #f1f1f1;
   padding: 10px;
-  border-radius: 10px;
   width: fit-content;
-  color: #010101;
+  color: gray;
   text-decoration: none;
   margin: 0 10px 5px 10px;
-  border: solid 1px #000000;
   font-size: 1.2rem;
   font-weight: 500;
   flex: 0 1 auto;
-}
-:is(.home, .article, .galeri, .donate) img {
-  width: 1.5rem;
-  height: auto;
-  filter: brightness(0);
 }
 button {
   cursor: pointer;
 }
 :is(.home, .article, .galeri, .donate):visited {
   text-decoration: none;
-  color: black;
-  border-color: black;
+  color: grey;
 }
 .search-bar>button {
   cursor: pointer;
