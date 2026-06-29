@@ -9,10 +9,13 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .container {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
 h1 {
   background: linear-gradient(90deg, #E0e0e0, #b8b8b8, #8a8a8a);
@@ -148,7 +151,6 @@ fieldset {
 
 }
 .nav-bar {
-  
   display: flex;
   flex-direction: row;
   background-color: RGB(27, 27, 29);
@@ -785,4 +787,21 @@ input[type="email"] {
   background-color: red;
   height: 80px;
   width: 40px;
+}
+.box {
+  background-color: chartreuse;
+  border: white;
+  border-radius: 10px;
+}
+.transition-box {
+  transition: transform 0.5s ease-in-out;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.transition-box:hover {
+  transform: rotate(45deg);
+}
+.text-color {
+  color: dodgerblue
 }
