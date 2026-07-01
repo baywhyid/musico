@@ -327,6 +327,10 @@ button {
   border: 2px solid black;
   margin-left: 2vw;
 }
+.test-pre {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
 .test-pre:target {
   background-color: green;
   color: white;
