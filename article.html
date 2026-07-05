@@ -34,7 +34,7 @@
             <h2 class="hiasan-aja">HTML, <span class="css-text">CSS Syntax</span></h2>
            <article id="article-content" class="article-content">
             <p class="article-paragraph">Dibawah ini adalah sedikit catatan yang saya pelajari tentang pemrograman web</p>
-            <p>Horizontal berarti dari kiri ke kanan atau sebaliknya atau menyamping (--- ), sedangkan vertical berarti dari atas ke bawah atau sebaliknya (|)</p>
+            <p>Horizontal/X berarti dari kiri ke kanan atau sebaliknya atau menyamping (--- ), sedangkan vertical/Y berarti dari atas ke bawah atau sebaliknya (|)</p>
             <p>&lt;abbr&gt untuk singkatan</p>
              <p>&lt;address&gt untuk informasi kontak</p>
              <p>&lt;area&gt untuk area pada image map</p>
@@ -170,7 +170,8 @@
 <p>cursor ada pointer, default, wait, help, text, etc. not-allowed</p>
 <p>pseudo class any-link adalah gabungan antara link dan visited</p>
 <p>tree-structural pseudo classes ada :root, :empty, :nth-child(), :nth-of-type(), dan lain-lain</p>
-<P>:first-child digunakan untuk memilih elemen pertama dalam sebuah grup elemen lalu ada :last-child untuk kebalikan dari :first-child</P>
+<P>:first-child digunakan untuk memilih elemen pertama dalam sebuah grup elemen dan harus element pertama, jika kamu set first-child p lalu diatas p ada h2 maka tidak akan berhasil. gunakan first-of-type jika ingin menargetkan element berdasar tipe-nya dan gunakan first-child untuk menargetkan element pertama yang langsung child dari parentnya.</P>
+<p>lalu last-child dan last-of-type adalah kebalikan element diatas</p>
 <p>Menggunakan :only-childpseudo-class memastikan hanya divelemen dengan satu child element yang dipilih</p>
 <p>:nth-child() untuk memilih elemen berdasarkan posisinya dalam grup elemen, contoh: :nth-child(2) untuk memilih elemen kedua, :nth-child(odd) untuk memilih elemen ganjil, dan :nth-child(even) untuk memilih elemen genap</p>
 <p>Functional pseudo-class memungkinkan kamu menyeleksi elemen berdasarkan kondisi atau hubungan yang lebih kompleks. Berbeda dengan pseudo-class biasa yang menargetkan elemen berdasarkan suatu state, misalnya :hover atau :focus, functional pseudo-class menerima argumen di dalam tanda kurung, sehingga disebut "functional pseudo-class".</p>
@@ -178,7 +179,7 @@
 <p>:is() digunakan untuk mengelompokkan selector agar penulisan CSS lebih ringkas dan mudah dibaca. Pseudo-class ini tetap memiliki specificity normal seperti selector biasa.</p>
 <p>:where() digunakan untuk mengelompokkan beberapa selector agar penulisan CSS lebih ringkas dan mudah dibaca, bedanya dengan :is() pseudo-class ini memiliki specificity 0 sehingga lebih mudah dioverride atau ditimpa pakai gaya lain.</p>
 <p>:has pseudo-class untuk style elemnt parent berdasarkan element childern</p>
-<p>Pseudo-class :not() ini ideal untuk situasi di mana Anda ingin menerapkan gaya ke sekelompok elemen, kecuali satu atau lebih pengecualian spesifik</p>
+<p>Pseudo-class :not() dipakai untuk situasi di mana Anda ingin menerapkan style css ke kelompok elemen dan mengecualikan suatu element berdasar selectornya, contohnya ada di <a href="lab.html#not-pseudo">sini</a></p>
 <p>mirip pseudo-class ada pseudo element, bedanya pseudo element memilik dua semi-colon (::) dan lebih sering digunakan untuk dekorasi, contoh pseudo element ada before and after</p>
 <p>::before digunakan untuk menambahkan content sebelum sebelum element dan after adalah sebaliknya</p>
 <p>dengan before element content di element akan seperti ini(👌before) dan dengan after element content di element akan seperti ini(after👌)</p>
@@ -256,7 +257,7 @@ border-color: blue red green black;</code></p>
 <p>semua element memiliki default margin dan padding di setiap browser, dan kadang berbeda ditiap browser menjadikan styling menjadi tidak konsisten, gunakan CSS reset di-awal untuk mengatasi hal ini.</p>
 <p>kamu juga bisa menggunakan css reset thirdparty seperti Normalize.css dan sanitize.css, install dengan <code>npm install normalize.css</code> atau <code>npm install sanitize.css lalu</code> <code>@import "normalize.css";</code></p>
 <p>filter properti digunakan untuk memodfikasi tampilan element secara visual tanpa mengubah assets asli, seperti menambahkan efek blur, brightness, atau kontras.</p>
-<p>function dari filter ada blur, brightness untuk mengatur terang, contrast , grayscale untuk efek hitam-putih, sepia efek vintage look, saturate mengatur intensitas warna, hue-rotate, invert membalik warna, opacity mengatur transparansi, drop-shadow bayangan mengikuti bentuk elemen</p>
+<p>function dari filter ada blur, brightness untuk mengatur terang, contrast , grayscale untuk efek hitam-putih, sepia efek vintage look, saturate mengatur intensitas warna, hue-rotate, invert membalik warna seperti hitam jadi putih dan sebaliknya, opacity mengatur transparansi, drop-shadow bayangan mengikuti bentuk elemen</p>
 <p>filter properti bisa dikombinasikan untuk beberapa efek seperti <code>filter: blur(5px) brightness(1.2) contrast(1.5);</code></p>
 <p>border-radius bisa menerima 4 value, top-left, top-right, bottom-right, bottom-left atau searah dengan jarum jam</p>
 <p>jika ada dua value, yang pertama untuk top-left dan bottom-right, yang kedua untuk top-right dan bottom-left mengikuti arah jarum jam</p>
@@ -293,6 +294,12 @@ border-color: blue red green black;</code></p>
 <p>font-face digunakan untuk menautkan font file external ke css agar terbaca oleh sistem</p>
 <p>font format dii font-face digunakan untuk memberikan petunjuk kepada browser jenis font apa ini. opsional tapi disarankan</p>
 <p>jenis font format meliputi collection, embedded-opentype, opentype, svg, truetype, woff, and woff2</p>
+<p>box-shadow tidak akan berpengaruh terhadap text biasa, jadi gunakan <code>text-shadow</code> dengan syntax <code>text-shadow: x y blur-radius color</code></p>
+<p>web seperti googles font dan font squirel digunakan untuk mencari banyak variase font gratis</p>
+<p><a href="https://webaim.org/resources/contrastchecker/">webaim contrast checker buat memeriksa kontras warna teks berdasarkan WCAG</a></p>
+<p>lalu ada TPGI color analyzer, berbasis app dekstop yg bisa analisa kontras web mu secara menyeluruh</p>
+<p>letter-spacing digunakan untuk mengatur space dalam text</p>
+<p>kamu bisa memakai div sebagai divider atau pembatas antar element</p>
             </article>
         </main>
         <footer class="article-footer">

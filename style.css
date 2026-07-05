@@ -1,7 +1,3 @@
-@font-face {
-  font-family: plus-jakarta-sans;
-  src: url("assets/font/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
-}
 body {
   background: #0f0f0f;
   font-family: sans-serif, arial;
@@ -23,6 +19,7 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 .child-container {
   position: relative;
@@ -58,7 +55,7 @@ a:visited {
 }
 :is(.home, .article, .galeri, .donate):hover {
   text-decoration: none;
-  color: gray;
+  color: #f5f6f7;
   background-color: RGB(45, 45, 45);
   border-radius: 10px;
 }
@@ -80,6 +77,9 @@ fieldset {
 .quotes1 {
   font-style: italic;
   color: greenyellow;
+}
+.quotes1 p {
+  font-family: bitcount;
 }
 .contact {
   color: #e0e0e0;
@@ -164,7 +164,7 @@ fieldset {
 .home, .article, .galeri, .donate {
   padding: 10px;
   width: fit-content;
-  color: gray;
+  color: #f5f6f7;
   text-decoration: none;
   margin: 0 10px 5px 10px;
   font-size: 1.2rem;
@@ -176,7 +176,7 @@ button {
 }
 :is(.home, .article, .galeri, .donate):visited {
   text-decoration: none;
-  color: grey;
+  color: #f5f6f7;
 }
 .search-bar>button {
   cursor: pointer;
@@ -456,6 +456,7 @@ mark.search-highlight-active {
 .card {
   background-color: #2a5298;
   color: white;
+  width: 450px;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   padding: 20px;
@@ -728,15 +729,13 @@ input[type="email"] {
   justify-content: space-between;
 }
 .hamburger-menu {
+  background: transparent;
+  border: none;
   font-size: 2rem;
   text-decoration: none;
   position: relative;
   color: #F5F6F7;
   margin: 0 20px 0 0;
-}
-.hamburger-menu:hover, .hamburger-menu:visited {
-  text-decoration: none;
-  color: #F5F6F7;
 }
 .html-entities {
   background-color: #161b22;
@@ -808,4 +807,38 @@ input[type="email"] {
 }
 .text-color {
   color: dodgerblue
+}
+.test-shadow {
+  background-color: palevioletred;
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+.text-shadow {
+  text-shadow: 2px 2px 5px black, 2px 2px 5px red, 4px 4px 5px cadetblue;
+  display: flex;
+  justify-content: space-between;
+}
+.divider {
+  margin: 20px 0;
+}
+.user-icon {
+  width: 25px;
+  transform: translateY(10px);
+  filter: brightness(100%) invert();
+  height: 25px;
+}
+.not-pseudo {
+  border: 1px solid red;
+  margin: 5px;
+  width: 300px;
+}
+.not-pseudo:active {
+  outline: #000000;
+}
+.not-pseudo p:not(.not-this) {
+  color: red;
+}
+.overflow-scroll p:first-of-type {
+  text-indent: 10px;
 }

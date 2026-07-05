@@ -5,3 +5,13 @@ html {
 *::before, *::after {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: plus-jakarta-sans;
+  src: url("assets/font/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype") tech(color-COLRv1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
