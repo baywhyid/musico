@@ -899,3 +899,21 @@ footer {
   display: flex;
   justify-content: space-between
 }
+.float {
+  width: 400px;
+  height: 200px;
+  border: 1px solid gray;
+}
+.float-profile {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+}
+.float h3 {
+  margin: auto;
+  margin-top: 10px;
+}
