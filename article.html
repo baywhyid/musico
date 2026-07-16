@@ -306,6 +306,10 @@ border-color: blue red green black;</code></p>
 <p>selain max(), ada juga min() yang digunakan untuk menentukan nilai minimum dari dua atau lebih nilai, bedanya dari max, min memlihi value yg lebih kecil</p>
 <p>clamp() adalah fungsi CSS yang digunakan untuk membatasi nilai suatu properti dalam rentang tertentu, contoh syntax width: clamp(100px, 50%, 200px); artinya width akan minimal 100px, maksimal 200px dan jika ukuran parent lebih besar dari 100px dan lebih kecil dari 200px maka width akan mengikuti ukuran parent</p>
 <p id="aria-hidden-note">aria-hidden="true" digunakan untuk menyembunyikan element dari bacaan screen reader</p>
+<p>position property memiliki 4 value yaitu static, relative, absolute, fixed dan sticky. default value adalah static dan tidak bisa diubah menggunkan top right ataupun bottom seperti value lainnya</p>
+<p>relative bisa digunakan untuk menjadi parent dari position absolute</p>
+<p>position absolute biasanya menggunakan acuan dari parent-nya. jika kamu set position: absolute; maka element akan mengambang dan tempatnya di normal flow akan dianggap kosong jadi akan membuat tempat dari absolute ini terisi oleh element lain</p>
+<p>z-index digunakan untuk menentukan mana element yang akan tampil diatas element lain. syntaxnya <code>z-index: 1-9999;</code> semakin besar nilai z-index, semakin tinggi derajat element tersebut dalam tumpukan</p>
             </article>
         </main>
         <footer class="article-footer">

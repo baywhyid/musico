@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
 }
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 5px;
   box-sizing: border-box;
@@ -665,6 +665,7 @@ input[type="email"] {
 .modul-btn {
   display: flex;
   justify-content: flex-start;
+  position: relative;
   margin: 0 30px;
 }
 .overflow-scroll {
@@ -855,9 +856,6 @@ input[type="email"] {
   text-align: center;
   color: #f5f6f7;
 }
-.divider {
-  border-bottom: 1px solid #f5f6f7;
-}
 .fcc-logo-img {
   width: max(250px, 25vw);
 }
@@ -879,7 +877,7 @@ input[type="email"] {
 .circle::before {
   content: "◉";
   color: black;
-  position: absolute;
+  position: relative;
   transform: translate(20px, 20px);
 }
 .circle::after {
@@ -900,9 +898,12 @@ footer {
   justify-content: space-between
 }
 .float {
-  width: 400px;
-  height: 200px;
   border: 1px solid gray;
+  width: 500px;
+}
+.float p:nth-of-type(2) {
+  clear: both;
+  color: red;
 }
 .float-profile {
   width: 100px;
@@ -913,7 +914,64 @@ footer {
   margin-right: 10px;
   float: left;
 }
-.float h3 {
-  margin: auto;
-  margin-top: 10px;
+.wrap-test {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  width: max(500px, 50%);
+}
+.wrap-box {
+  background-color: #333;
+  width: 100px;
+  height: 100px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.position-container {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  border: 1px solid #f5f6f7;
+  margin: 5px auto;
+}
+.position-box {
+  width: 50px;
+  height: 50px;
+  background-color: #4dabf7;
+  border-radius: 10px;
+}
+.absolute {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.fixed-position {
+  position: fixed;
+  top: 150px;
+  right: 10px;
+  background-color: #4dabf7;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.sticky-test {
+  background-color: #4dabf7;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  bottom: 10px;
+  z-index: 1000;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: #0f0f0f;
+  z-index: 1000;
 }
