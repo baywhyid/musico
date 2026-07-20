@@ -3,6 +3,9 @@
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
+* {
+  box-sizing: border-box;
+}
 }
 *::before, *::after {
   box-sizing: border-box;
@@ -15,5 +18,17 @@
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
+  }
+}
+@media (max-width: 768px) {
+  .media-test {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+  }
+}
+@media (min-width: 769px) {
+  .box {
+    background-color: magenta;
   }
 }

@@ -9,6 +9,7 @@
         <title>musico free audio player</title>
     </head>
     <body class="article-body">
+        <progress id="scroll-progress" value="0" max="100"></progress>
         <h1 class="first-title">notes</h1>
         <hr>
         <div class="container">
@@ -309,11 +310,17 @@ border-color: blue red green black;</code></p>
 <p>position property memiliki 4 value yaitu static, relative, absolute, fixed dan sticky. default value adalah static dan tidak bisa diubah menggunkan top right ataupun bottom seperti value lainnya</p>
 <p>relative bisa digunakan untuk menjadi parent dari position absolute</p>
 <p>position absolute biasanya menggunakan acuan dari parent-nya. jika kamu set position: absolute; maka element akan mengambang dan tempatnya di normal flow akan dianggap kosong jadi akan membuat tempat dari absolute ini terisi oleh element lain</p>
+<p>fixed position juga menghapus dari document flow dan relatice terhadap viewport jadi akan diposisi sama meskipun di scroll</p>
+<p>sticky position adalah kombinasi dari relative dan fixed, element akan berperilaku seperti relative dimana tetap berada di document flow sampai mencapai titik tertentu, lalu berperilaku seperti fixed dan menempel</p>
 <p>z-index digunakan untuk menentukan mana element yang akan tampil diatas element lain. syntaxnya <code>z-index: 1-9999;</code> semakin besar nilai z-index, semakin tinggi derajat element tersebut dalam tumpukan</p>
+<p>@ rules media adalah at-rules yang digunakan untuk menerapkan style tertentu berdasarkan kondisi perangkat pengguna, seperti ukuran layar ataupun resolusi</p>
+<p>@ rules media max-width berarti rules ini hanya berlaku jika width tidak melebihi value yang ditentukan</p>
+<p>lalu @ rules media min-width berlaku ketika width minimal sesuai nilai yang ditentukan, contohnya nya jika min-width: 768px maka rules tidak akan berlaku jika width kurang dari 768px</p>
+<p>kamu juga bisa pakai media di link, misalnya jika width &gt;=768px maka href ke A.css, jika width &lt;=768px maka href diarahkan ke B.css. contohnya ada di <a href="https://www.w3schools.com/csSref/atrule_media.php">sini</a></p>
+<p>gunakan display flow-root untuk pengganti clearfix di css jika kamu memakai float properti dan keluar dari layout</p>
             </article>
         </main>
         <footer class="article-footer">
-            <hr>
             <p>Copyright © 2026 Musico. All rights reserved.</p>
         </footer>
         <script src="index.js" defer></script>

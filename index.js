@@ -189,3 +189,14 @@ function goToMark(idx) {
   const info = document.getElementById('searchInfo');
   if (info) info.textContent = `${searchCurrent + 1} / ${searchMarks.length} hasil`;
 }
+const progress = document.getElementById("scroll-progress");
+
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+
+    const pageHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    progress.value = (scrollTop / pageHeight) * 100;
+});
