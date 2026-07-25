@@ -882,12 +882,14 @@ input[type="email"] {
   margin: 10px auto;
 }
 .circle {
-  border-radius: 50%;
+  position: relative;
+  clip-path: circle(50px);
+  left: 20px;
 }
 .circle::before {
   content: "◉";
   color: black;
-  position: relative;
+  position: absolute;
   transform: translate(20px, 20px);
 }
 .circle::after {
@@ -1072,4 +1074,33 @@ header {
 }
 .ipinipin {
   float: right;
+}
+.box-clip {
+  clip-path: ellipse(50px 0 0 0);
+}
+@media (min-width: 768px) {
+  .text-overflow-container {
+    margin: auto;
+    width: 60vw;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .text-overflow-container {
+  width: 80vw;
+  border: 1px solid white;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+}
+.text-overflow-test {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+a[title], a[title]:hover, a[title]:active, a[title]:visited :not(.back-to-home) {
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
