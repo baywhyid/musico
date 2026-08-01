@@ -749,7 +749,6 @@ input[type="email"] {
   border: none;
   font-size: 2rem;
   text-decoration: none;
-  position: relative;
   color: #F5F6F7;
   margin: 0 20px 0 0;
 }
@@ -851,6 +850,14 @@ input[type="email"] {
   border: 1px solid red;
   margin: 5px;
   width: 300px;
+}
+.not-pseudo li {
+  margin: 8px 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  border-bottom: 1px solid #f5f6f7;
 }
 .not-pseudo:active {
   outline: #000000;
@@ -1103,4 +1110,30 @@ a[title], a[title]:hover, a[title]:active, a[title]:visited :not(.back-to-home) 
   color: red;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.test-selector {
+  border: 1px double white;
+  width: 300px;
+  margin: 10px;
+}
+p.testselector {
+  color: red;
+}
+.test-selector p.testselector {
+  margin: 0;
+}
+.test-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mini-container {
+  border: 1px solid white;
+  width: 300px;
+  margin: 10px;
+}
+.mini-container p {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
