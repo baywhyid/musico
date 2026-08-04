@@ -32,3 +32,18 @@
     background-color: magenta;
   }
 }
+@media (max-width: 768px) {
+  .hamburger-menu {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #F5F6F7;
+  margin: 0 20px 0 0;
+}
+}
+@media (min-width: 769px) {
+  .hamburger-menu {
+  display: none;
+}
+}

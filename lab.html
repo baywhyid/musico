@@ -183,6 +183,9 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit cumque corporis maxime tenetur officiis voluptatibus vel architecto provident, enim nisi praesentium, placeat consequatur atque blanditiis obcaecati laborum, error numquam!</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat neque tempore reiciendis laborum ipsa ad perferendis! Architecto neque facilis veritatis hic sit ratione, sint perspiciatis blanditiis earum? Omnis, sed hic.</p>
 </div>
+<div class="background-test">
+    <img src="assets/galery/2211.w018.n002.1449B.p15.1449.jpg" class="background-test-img">
+    </div>
 <div class="media-test"></div>
 <div class="position-container">
  <div class="position-box absolute"></div>
@@ -198,6 +201,18 @@
 </ol>
 <div class="mini-container">
     <p>ini adalah contoh child combinator</p>
+</div>
+
+<div class="dlg-container">
+    <dialog id="test-dialog"><button commandFor="test-dialog" command="request-close">Close</button></dialog>
+    <button commandFor="test-dialog" command="show-modal">Show Dialog</button>
+</div>
+<div class="popover-container">
+    <button popovertargetaction="show" popovertarget="test-popover">Show Popover</button>
+    <div id="test-popover" popover>
+        <p>ini adalah contoh popover</p>
+        <button commandFor="test-popover" command="hide-popover">Close</button>
+    </div>
 </div>
 <div class="test-selector">
     <p class="testselector">Paragraph1</p>

@@ -18,7 +18,10 @@
         <section class="title-menu">
         <h1 class="first-title">Musico</h1>
         <div class="header-right">
-            <a href="#"><img src="assets/icon/user.png" class="user-icon"></a>
+            <div id="user-popover" popover>
+                <p>test</p>
+            </div>
+            <button class="popover-btn" popovertarget="user-popover" popovertargetaction="show"><img src="assets/icon/user.png" alt="user icon" width="30"></button>
         <button class="hamburger-menu" onclick="alert('error')">&#9776;</button>
         </div>
         </section>

@@ -265,6 +265,9 @@ button {
   border-radius: 10px;
   border: 2px solid black;
 }
+.modal-dialog::backdrop {
+  backdrop-filter: blur(3px);
+}
 .btn-group {
   display: flex;
   gap: 10px;
@@ -744,14 +747,6 @@ input[type="email"] {
   display: flex;
   justify-content: space-between;
 }
-.hamburger-menu {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  text-decoration: none;
-  color: #F5F6F7;
-  margin: 0 20px 0 0;
-}
 .html-entities {
   background-color: #161b22;
   padding: 5px;
@@ -776,6 +771,7 @@ input[type="email"] {
 }
 .header-right {
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: flex-start;
   gap: 0.5rem;
@@ -840,11 +836,13 @@ input[type="email"] {
 .divider {
   margin: 20px 0;
 }
-.user-icon {
-  width: 25px;
-  transform: translateY(10px);
+.popover-btn {
+  background: transparent;
+  width: calc(100% - 50px);
+  border: none;
+  transform: translateY(8px);
   filter: brightness(100%) invert();
-  height: 25px;
+  height: auto;
 }
 .not-pseudo {
   border: 1px solid red;
@@ -1136,4 +1134,41 @@ p.testselector {
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+#test-dialog {
+  background-color: #333;
+  padding: 50px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.background-test {
+  background-color: #333;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 2px solid #f5f6f7;
+}
+.background-test-image {
+  background-size: contain;
+  background-position: center;
+  border-radius: 10px;
+}
+#user-popover {
+  position: absolute;
+  bottom: 95%;
+  left: 65%;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #f5f6f7;
+}
+.section-galery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #f5f6f7;
+  border-radius: 10px;
 }
