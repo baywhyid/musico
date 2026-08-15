@@ -10,7 +10,7 @@
     </head>
     <body class="article-body">
         <progress id="scroll-progress" value="0" max="100"></progress>
-        <h1 class="first-title">notes</h1>
+        <h1 class="first-title"><a href="index.html" class="title-judul">notes</a></h1>
         <hr>
         <div class="container">
         <p class="big-font">Notes dari freecodecamp</p>
@@ -36,6 +36,7 @@
            <article id="article-content" class="article-content">
             <p class="article-paragraph">Dibawah ini adalah sedikit catatan yang saya pelajari tentang pemrograman web</p>
             <p>Horizontal/X berarti dari kiri ke kanan atau sebaliknya atau menyamping (--- ), sedangkan vertical/Y berarti dari atas ke bawah atau sebaliknya (|)</p>
+            <p>fallback adalah kondisi dimana jika value/sesuatu yang pertama tidak valid, maka akan diarahkan ke value kedua, dan jika kedua juga invalid maka akan ke tiga dan seterusnya</p>
             <p>&lt;abbr&gt untuk singkatan</p>
              <p>&lt;address&gt untuk informasi kontak</p>
              <p>&lt;area&gt untuk area pada image map</p>
@@ -330,6 +331,16 @@ border-color: blue red green black;</code></p>
 <p>background adalah shorthand atau gabungan dari bakcground-color, background-image, background-position, background-size, background-repeat, attachment, origin, clip</p>
 <p>backdrop digunakan untuk menerapkan efek pada lapisan belakang elemen di belakang elemen seperti modal. contohnya adalah blur atau brightness</p>
 <p>backdrop-filter digunakan untuk menerapkan efek filter pada elemen di belakang elemen yang memiliki properti ini. contohnya adalah blur atau brightness</p>
+<p>selain min-width dan max-width, kamu juga bisa menggunakan media query dengan kondisi lain seperti orientation (landscape/portrait), aspect-ratio, resolution dan prefers-color-scheme untuk menyesuaikan tampilan berdasarkan preferensi pengguna</p>
+<p>orientation biasanya ada di mobile devices yang dapat berubah dari potret(default) ke lanskap(seperti film)</p>
+<p>media query juga bisa dikombinasikan dengan operator logika seperti and, or, dan not</p>
+<p>only digunakan untuk memastikan media query hanya berlaku pada media type yang ditentukan, seperti screen atau print. Jika media type tidak ditulis, default-nya adalah all.</p>
+<p>rekomendasi px untuk media query adalah 640px untuk mobile, 641px hingga 1024px untuk tablet, dan 1025px ke atas untuk desktop. ini bukan aturan wajib, namun bisa dijadikan referensi.</p>
+<p>css variables atau custom properti memungkinkan kamu membuat custom properti sendiri dengan awalan --nama-properti: value. untuk nama bebas dan kamu bisa menggunakan nilai-nilai ini di seluruh stylesheet dengan var(--nama-properti)</p>
+<p>custom properti juga mendukung fallback value</p>
+<p>selain itu, custom properti juga bisa digunakan untuk membuat responsive desain dan referensi custom properti lain</p>
+<p>inherit ambil dari parent, initial </p>
+<p>mem buat lingkaran bisa pake border-radius, clip-path dan mask</p>
             </article>
         </main>
         <footer class="article-footer">

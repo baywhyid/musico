@@ -3,35 +3,42 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta charset="UTF-8">
+        <link rel="preload" href="style.css" as="style">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="global.css">
-        <link rel="preload" href="style.css" as="style">
   <script src="index.js" defer></script>
+  <title>musico free audio player</title>
 </head>
-
-        <title>musico free audio player</title>
     <body>   
         <div class="pembungkus">
-        <section class="title-menu">
-        <h1 class="first-title">Musico</h1>
-        <div class="header-right">
-            <div id="user-popover" popover>
+         <section class="title-menu">
+         <h1 class="first-title"><a href="index.html" class="title-judul">Musico</a></h1>
+           <div class="header-right">
+               <div id="user-popover" popover>
                 <p>test</p>
-            </div>
-            <button class="popover-btn" popovertarget="user-popover" popovertargetaction="show"><img src="assets/icon/user.png" alt="user icon" width="30"></button>
-        <button class="hamburger-menu" onclick="alert('error')">&#9776;</button>
+                </div>
+              <button  class="popover-btn" popovertarget="user-popover" popovertargetaction="show"><img src="assets/icon/user.png" alt="user icon"></button>
+             <button class="hamburger-menu" popovertarget="hamburger-dialog"></button>
+             <div id="hamburger-dialog" class="hamburger-dialog" popover>
+                 <nav class="hamburger-nav">
+                    <a href="index.html" class="home">Home</a>
+                    <a href="galery.html" class="galeri">Galeri</a>
+                    <a href="lab.html" class="donate">Lab</a>
+                    <a href="article.html" class="article">Docs</a>
+                </nav>
+             </div>
         </div>
         </section>
         <hr>
         <section class="container">
         <header>
                 <nav class="nav-bar">
-                       <a href="index.html" class="home">Home</a>
+                        <a href="index.html" class="home">Home</a>
                         <a href="galery.html" class="galeri">Galeri</a>
-                        <a href="donate.html" class="donate">Donate</a>
+                        <a href="lab.html" class="donate">Lab</a>
                         <a href="article.html" class="article">Docs</a>
 
                 </nav>
@@ -39,7 +46,7 @@
             <div class="divider"></div>
             <form class="search-nav" onsubmit="return false;" autocomplete="off">
             <input type="text" placeholder="Masukan Keyword..." id="searchInput" class="search-bar" minlength="3">
-        </form>
+            </form>
         <div class="divider"></div>
         <div class="child-container">
         <p>home/library/donate/article</p>
@@ -92,6 +99,7 @@
                 <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
                 <li><a href="https://www.npmjs.com/" target="_blank">npm library</a></li>
                 <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
+                <li><a href="https://fontawesome.com/icons" target="_blank">Font Awesome Icons</a></li>
             </ul>
     </aside>
     <section class="section-1">
@@ -107,7 +115,7 @@
   <p>"Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"</p>
 </blockquote>
 </div>
-code exsperimen ada <a href="lab.html" title="testcode">disini</a> &larr;</a>
+<p>code exsperimen ada <a href="lab.html" title="testcode" class="code-link">disini</a> &larr;</p>
 <p>&mdash; Bayu Ardiansyah</p>
  <div role="math">
         <p>Contoh persamaan matematika:</p>
@@ -115,7 +123,7 @@ code exsperimen ada <a href="lab.html" title="testcode">disini</a> &larr;</a>
        <div role="button">
         tap
        </div>
-    <dialog open>
+    <dialog>
         <p>Dialog terbuka</p>
         <button onclick="this.parentElement.close()">Tutup</button>
     </dialog>
@@ -134,7 +142,7 @@ code exsperimen ada <a href="lab.html" title="testcode">disini</a> &larr;</a>
         <input required type="email" id="email" placeholder="janedoe@gmail.com" minlength="3" maxlength="50" size="20">
         <button type="submit" class="submit-btn">Submit</button>
 <input type="button" value="INIDIA" onclick="ININIGG()">
-</div>
+    </fieldset>
 <fieldset>
     <legend>Rate web kita</legend>
     <label for="rating">Rate</label>
@@ -158,15 +166,7 @@ code exsperimen ada <a href="lab.html" title="testcode">disini</a> &larr;</a>
     </div>
     </section>
         <footer class="site-footer">
-            <small>
-            <p>© 2024 musico. All rights reserved.</p>
-            </small>
-            <div class="logo">
-            <a href="https://github.com/baywhyid/" target="_blank">
-           <img src="assets/icon/icons8-github-logo-96.png" alt="github icon" width="50" class="logo-github" title="GitHub"></a>
-           <a href="/" target="_blank">
-            <img src="assets/icon/icons8-telegram-app-50.png" alt="telegram icon" width="50" class="logo-telegram" title="Telegram"></a>
-            </div>
+            <small>© 2024 musico. All rights reserved.</small>
         </footer>
     </div>
     </body>

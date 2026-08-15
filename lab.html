@@ -13,7 +13,7 @@
             <span>BREAKING NEWS</span>
         </div>
         <section class="testradial">
-        <h1 id="headerutama">Musico</h1>
+        <h1 id="headerutama"><a href="index.html" class="title-judul">musico</a></h1>
         <hr>
         <header>
                 <nav class="nav-bar">
@@ -200,9 +200,11 @@
     <li>text kelima</li>
 </ol>
 <div class="mini-container">
-    <p>ini adalah contoh child combinator</p>
+    <p class="p-test">ini adalah contoh child combinator</p>
 </div>
-
+ <div class="test-media">
+    <div class="box-media"></div>
+</div>
 <div class="dlg-container">
     <dialog id="test-dialog"><button commandFor="test-dialog" command="request-close">Close</button></dialog>
     <button commandFor="test-dialog" command="show-modal">Show Dialog</button>
@@ -214,12 +216,25 @@
         <button commandFor="test-popover" command="hide-popover">Close</button>
     </div>
 </div>
+<div>
+<div class="box-polos testbox1"></div>
+<div class="box-polos testbox2"></div>
+<div class="box-polos testbox3"><div class="box-polos testboxhover"></div></div>
+</div>
+<p class="fallback">ini adalah contoh fallback content di custom properties, saya menulis --fallback: balck di root supaya browser mengalihkan ke value kedua yaitu red, ini yang dinamakan fallback value, dimana jika value pertama tidak valid maka browser akan menggunakan value kedua</p>
 <div class="test-selector">
     <p class="testselector">Paragraph1</p>
     <p class="testselector">Paragraph2</p>
     <div class="testselector">Div1</div>
     <div class="testselector">Div2</div>
     <p class="testselector">Paragraph3</p>
+</div>
+<div>
+    <button class="test-hover-btn">HOVERME</button>
+</div>
+<div class="mini-container test-media-var">
+    <div class="box-var"></div>
+    <p>ini adalah contoh combo dari media query dan custom properto, dimana jika di perangkat dengan lebar kurang dari 768px maka box hanya 100px x 100px berwarna biru dan jika layar lebih dari 768px maka box akan jadi 150px x 150px dengan warna merah</p>
 </div>
 <div class="hidden-gem">
     <div class="box"><span>selamat kamu temuin Hidden Gem</span></div>

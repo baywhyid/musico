@@ -15,23 +15,15 @@
   src: url("assets/font/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype") tech(color-COLRv1);
 }
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@media (max-width: 768px) {
-  .hamburger-menu {
-    display: block;
-  }
+:root {
+  --bd-radius-sm: 4px;
+  --bd-raddius-m: 8px;
+  --bd-radius-r: 16px;
+  --margin-sm: 8px;
+  --margin-b: 25px;
+  --margin-m: 15px;
 }
-@media (max-width: 768px) {
-  .media-test {
-    width: 200px;
-    height: 50px;
-    background-color: red;
-  }
-}
-@media (min-width: 769px) {
-  .box {
-    background-color: magenta;
-  }
-}
+/* untuk responsive mobile*/
 @media (max-width: 768px) {
   .hamburger-menu {
   background: transparent;
@@ -41,9 +33,117 @@
   color: #F5F6F7;
   margin: 0 20px 0 0;
 }
+  .popover-btn {
+  background-color: transparent;
+  transform: translateY(8px);
+  filter: brightness(100%) invert();
+  width: calc(100% - 50px);
+  border: none;
+  width: 40px;
+  height: auto;
 }
+  .media-test {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+  }
+  .section-galery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #f5f6f7;
+  border-radius: 10px;
+}
+  header {
+    display: none;
+  }
+  .hamburger-nav a {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: #f5f6f7;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  width: 100%;
+  line-height: 1.5;
+}
+ :root {
+  --card-bg-box: blue;
+  --width-box: 100px;
+  --height-box: 100px;
+  --padding-box: 15px;
+ }
+}
+/* untuk responsive desktop*/
 @media (min-width: 769px) {
   .hamburger-menu {
   display: none;
 }
+  .popover-btn {
+  display: none;
+}
+  .box {
+    background-color: magenta;
+  }
+  .section-galery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #f5f6f7;
+  border-radius: 10px;
+}
+ :root {
+  --card-bg-box: red;
+  --width-box: 150px;
+  --height-box: 150px;
+  --padding-box: 25px;
+ }
+}
+/*antara 769px sampai 1024px*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .box-media {
+  border-radius: 10px;
+  background-color: #0000f5;
+}
+}
+/*button pointer*/
+button {
+  cursor: pointer;
+}
+/* var custom properties */
+:root {
+  --color-primary: #F5F6F7;
+  --color-secondary: #1A1A1A;
+  --color-accent: #FF5733;
+  --font-family-primary: 'Plus Jakarta Sans', sans-serif;
+  --font-family-secondary: 'Lato', sans-serif;
+  --font-family-ternary: 'Bitcount Ink', sans-serif;
+  --length-small: 4px;
+  --length-medium: 8px;
+  --length-large: 16px;
+  --fallback: balck;
+}
+
+/*@property*/
+@property --test-gradient {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+@property --test-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: yellow;
+}
+@property --test-scale {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1;
+}
+@property --sumbu {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 30px;
 }
