@@ -7,6 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="global.css">
   <script src="index.js" defer></script>
@@ -23,6 +25,9 @@
               <button  class="popover-btn" popovertarget="user-popover" popovertargetaction="show"><img src="assets/icon/user.png" alt="user icon"></button>
              <button class="hamburger-menu" popovertarget="hamburger-dialog"></button>
              <div id="hamburger-dialog" class="hamburger-dialog" popover>
+                <div class="hamburger-header">
+                <button popovertarget="hamburger-dialog" popovertargetaction="close" class="close-btn" aria-label="close">X</button>
+                </div>
                  <nav class="hamburger-nav">
                     <a href="index.html" class="home">Home</a>
                     <a href="galery.html" class="galeri">Galeri</a>
@@ -100,6 +105,7 @@
                 <li><a href="https://www.npmjs.com/" target="_blank">npm library</a></li>
                 <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
                 <li><a href="https://fontawesome.com/icons" target="_blank">Font Awesome Icons</a></li>
+                <li><a href="library.html" target="_blank">Responsive web design css</a></li>
             </ul>
     </aside>
     <section class="section-1">
@@ -157,16 +163,24 @@
         <section class="media-contact">
         <address>
             <h2 class="sub-title">Kontak</h2>
-            <p>phone: <a href="tel:+6281356347560" class="contact">+62 813-5634-7560</a></p>
+            <p>phone: <a href="tel:+6281356347560" class="contact">+62 813-xxxx-xxxx</a></p>
             <p>email: <a href="mailto:magiccosmos765@gmail.com" class="contact">magiccosmos765@gmail.com</a></p>
             <p>Follow us on social media:</p>
+            <div class="social-media-container">
+            <a href="https://github.com/baywhyid" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://t.me/noocht" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+            </div>
          <p><a href="about.html" class="contact-about">About Musico</a></p>
         </address>
         </section>
     </div>
     </section>
         <footer class="site-footer">
-            <small>© 2024 musico. All rights reserved.</small>
+            <p>© 2024 musico. All rights reserved.</p>
         </footer>
     </div>
     </body>

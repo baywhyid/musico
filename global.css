@@ -47,14 +47,6 @@
     height: 50px;
     background-color: red;
   }
-  .section-galery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid #f5f6f7;
-  border-radius: 10px;
-}
   header {
     display: none;
   }
@@ -86,14 +78,6 @@
   .box {
     background-color: magenta;
   }
-  .section-galery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid #f5f6f7;
-  border-radius: 10px;
-}
  :root {
   --card-bg-box: red;
   --width-box: 150px;

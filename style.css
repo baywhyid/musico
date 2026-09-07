@@ -524,6 +524,7 @@ input[type="email"] {
 }
 .comment-area {
   width: 100%;
+  caret-color: yellow;
   max-width: 300px;
   border-radius: 10px;
   padding: 10px;
@@ -1141,10 +1142,9 @@ p.testselector {
 }
 .section-galery {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 20px;
   padding: 10px;
-  border: 1px solid #f5f6f7;
   border-radius: 10px;
 }
 .box-media {
@@ -1172,15 +1172,14 @@ p.testselector {
   color: inherit
 }
 #hamburger-dialog {
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition:
     transform 0.2s ease,
     opacity 0.3s ease,
     display 0.3s allow-discrete,
     overlay 0.3s allow-discrete;
   top: 0;
-  left: auto;
-  right: 0;
+  left: 0;
   position: fixed;
   height: 100vh;
   background-color: #333;
@@ -1194,23 +1193,18 @@ p.testselector {
   filter: blur(500px);
 }
 #hamburger-dialog:popover-open {
-    transform: translateX(0);
-    opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 }
 @starting-style {
   #hamburger-dialog:popover-open {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
 }
 .hamburger-menu::before {
   content: "☰";
   transform: ease-in-out;
-}
-body:has(#hamburger-dialog:popover-open) .hamburger-menu::before {
-  content: "X";
-  transform: translateY(8px);
-  display: inline-block;
 }
 .fallback {
   color: var(--fallback-color, red);
@@ -1248,7 +1242,7 @@ body:has(#hamburger-dialog:popover-open) .hamburger-menu::before {
   z-index: 1;
 }
 .test-hover-btn:hover::before {
-  transform: scaleX(1)
+  transform: scaleX(1);
   z-index: 1;
 }
 .box-polos {
@@ -1265,7 +1259,14 @@ body:has(#hamburger-dialog:popover-open) .hamburger-menu::before {
   --test-gradient: 90deg;
 }
 .testbox2 {
-  display: none;
+  border-radius: 50%;
+  border: none;
+  background: conic-gradient( red, green, blue, yellow);
+  transition: transform 0.5s ease-in-out;
+}
+.testbox2:hover {
+  transform: rotate(360deg);
+  background: conic-gradient( yellow, blue, green, red);
 }
 .testbox3 {
   width: 150px;
@@ -1276,7 +1277,7 @@ body:has(#hamburger-dialog:popover-open) .hamburger-menu::before {
   border-radius: var(--length-medium);
 }
 .testboxhover {
-  background-color: yellow;
+  background: linear-gradient(90deg, yellow, orange);
   height: 50px;
   width: -0px;
   border: none;
@@ -1289,18 +1290,107 @@ body:has(#hamburger-dialog:popover-open) .hamburger-menu::before {
 .testbox3:hover .testboxhover {
   width: 100%;
 }
+.testbox3:hover {
+  transform: rotate(-3deg);
+}
 .testbox4 {
-  width: 150px;
-  height: 50px;
-  position: relative;
-  background-color: #0a0a23;
+  width: 300px;
+  height: 300px;
+  background: repeating-linear-gradient(white 1px, white 2px, transparent 1px, transparent 35px), repeating-linear-gradient(90deg, white 1px, white 2px, transparent 1px, transparent 35px);
 }
 .testboxscale {
-  display: none;
   position: absolute;
   background-color: #2a5298;
   width: 150px;
   height: 50px;
   top: -8px;
   left: -8px;
+}
+.hamburger-header {
+  position: relative;
+}
+.hamburger-nav {
+  transform: translateY(10px);
+}
+.close-btn {
+  position: absolute;
+  margin: 5px 5x 0 5px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: var(--length-small);
+  font-size: 1.5em;
+  right: 0;
+  top: -1.2em;
+}
+.gridtest {
+  background-color: crimson;
+}
+.grid-container-test {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4, 50px);
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.grid-container-test1 {
+  display: grid;
+  grid-template-rows: 50px 60px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  resize: horizontal;
+  overflow: auto;
+}
+.item-grid {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.item-grid4 {
+  grid-row: 4 / 2;
+}
+.grid-container-test2 {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4,50px);
+  column-gap: 10px;
+  row-gap: 15px;
+  grid-template-areas: 
+    'header header header'
+    'sidebar-left content sidebar-right'
+    'sidebar-left . sidebar-right'
+    'footer footer footer'
+  ;
+}
+.grid-container-test2 > div {
+  background-color: #4dabf7;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  line-height: 3em;
+}
+.grid-header {
+  grid-area: header;
+}
+.grid-sidebar-left {
+  grid-area: sidebar-left;
+}
+.grid-sidebar-right {
+  grid-area: sidebar-right;
+}
+.grid-content {
+  grid-area: content;
+}
+.grid-footer {
+  grid-area: footer;
+}
+.fa-brands {
+  font-size: 2.5rem;
+}
+.social-media-container a {
+  text-decoration: none;
+  color: inherit;
+}
+.social-media-container {
+  letter-spacing: 0.3em;
 }
