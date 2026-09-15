@@ -81,6 +81,7 @@ fieldset {
 }
 .quotes1 p {
   font-family: bitcount;
+  text-align: center;
 }
 .contact {
   color: #e0e0e0;
@@ -299,8 +300,9 @@ button {
   align-self: stretch;
 }
 .article-content>p {
-  font-size: 17px;
+  font-size: 1.1rem;
   line-height: 1.5em;
+  letter-spacing: 0.5px;
 }
 .lab-nav {
   width: calc(50% - 10px);
@@ -1260,13 +1262,14 @@ p.testselector {
 }
 .testbox2 {
   border-radius: 50%;
-  border: none;
-  background: conic-gradient( red, green, blue, yellow);
-  transition: transform 0.5s ease-in-out;
+  box-sizing: border-box;
+  width: 100px;
+  border: 5px dashed black;
+  background: conic-gradient( from var(--test-gradient), blue, yellow);
+  transition: --test-gradient 0.5s ease-in-out;
 }
 .testbox2:hover {
-  transform: rotate(360deg);
-  background: conic-gradient( yellow, blue, green, red);
+  --test-gradient: 180deg;
 }
 .testbox3 {
   width: 150px;
@@ -1386,6 +1389,8 @@ p.testselector {
 }
 .fa-brands {
   font-size: 2.5rem;
+  transition: font-size 0.1s, color 0.3s;
+  gap: 10px;
 }
 .social-media-container a {
   text-decoration: none;
@@ -1393,4 +1398,27 @@ p.testselector {
 }
 .social-media-container {
   letter-spacing: 0.3em;
+}
+.social-media-container .fa-brands:hover {
+  font-size: 2.3rem;
+  color: #4dabf7;
+}
+.modal-dialog.open {
+  overflow: hidden;
+}
+.grid-container-test3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-auto-flow: column dense;
+}
+.grid-items {
+  background-color: #4dabf7;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+}
+.grid-items:nth-child(1) {
+  grid-column: 1 / 3;
 }
