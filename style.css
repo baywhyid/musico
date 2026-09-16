@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 .container {
   max-width: 900px;
@@ -1421,4 +1422,27 @@ p.testselector {
 }
 .grid-items:nth-child(1) {
   grid-column: 1 / 3;
+}
+.testbox5 {
+  border-radius: 50%;
+  background: conic-gradient(from var(--test-gradient), blue, yellow);
+  animation: rotate 5s linear infinite;
+  -webkit-font-smoothing: antialiased;
+}
+.testbox5:hover {
+  animation-play-state: paused;
+}
+.slide-animation-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  border: 1px solid #f5f6f7;
+  border-left: none;
+  border-right: none;
+}
+.slide-animation {
+  animation: slide 5s ease-in-out infinite;
+}
+.slide-animation:hover {
+  animation-play-state: paused;
 }

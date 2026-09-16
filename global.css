@@ -131,3 +131,28 @@ button {
   inherits: false;
   initial-value: 30px;
 }
+@keyframes rotate {
+  0% {
+    --test-gradient: 0deg;
+  }
+  100% {
+    --test-gradient: 360deg;
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(-8%);
+  }
+ to 0% {
+    transform: translateX(0%); opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110%); opacity: 0;
+  }
+}
