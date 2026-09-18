@@ -806,6 +806,7 @@ input[type="email"] {
   width: 100px;
   height: 100px;
   margin: auto;
+  transform-origin: bottom right;
 }
 .transition-box:hover {
   transform: rotate(45deg);
@@ -1427,22 +1428,52 @@ p.testselector {
   border-radius: 50%;
   background: conic-gradient(from var(--test-gradient), blue, yellow);
   animation: rotate 5s linear infinite;
-  -webkit-font-smoothing: antialiased;
 }
 .testbox5:hover {
   animation-play-state: paused;
 }
 .slide-animation-container {
-  overflow: hidden;
-  width: 100%;
   position: relative;
   border: 1px solid #f5f6f7;
   border-left: none;
   border-right: none;
 }
 .slide-animation {
-  animation: slide 5s ease-in-out infinite;
+  animation: slide 5s linear infinite;
+}
+.slide-animation2 {
+  animation: slide2 5s ease-in infinite;
 }
 .slide-animation:hover {
   animation-play-state: paused;
+}
+.slide-animation2:hover {
+  animation-play-state: paused;
+}
+.testbox6 {
+  border-radius: 50%;
+  background-color: silver;
+  position: relative;
+  border: 1px solid black;
+}
+.line {
+  border: 1px solid black;
+  width: 50%;
+  height: 1px;
+  position: absolute;
+  transform-origin: top left;
+  top: 50%;
+  left: 50%;
+  animation: test-line 5s linear infinite;
+  border-left: 10px solid white;
+}
+.dec-1 {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  position: absolute;
+  left: 40%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid black;
 }

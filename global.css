@@ -141,6 +141,23 @@ button {
 }
 @keyframes slide {
   from {
+    transform: translateX(-25%);
+  }
+ to 0% {
+    transform: translateX(0%); opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110%); opacity: 0;
+  }
+}
+@keyframes slide2 {
+  from {
     transform: translateX(-8%);
   }
  to 0% {
@@ -154,5 +171,13 @@ button {
   }
   100% {
     transform: translateX(110%); opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
