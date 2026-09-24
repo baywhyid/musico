@@ -1455,6 +1455,7 @@ p.testselector {
   background-color: silver;
   position: relative;
   border: 1px solid black;
+  cursor: not-allowed;
 }
 .line {
   border: 1px solid black;

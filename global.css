@@ -181,3 +181,16 @@ button {
     scroll-behavior: auto !important;
   }
 }
+@keyframes test-line {
+  0% {
+    transform: rotate(0deg);
+    background-color: yellow;
+  }
+  50% {
+    transform: rotate(-180deg);
+    background-color: blue;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
