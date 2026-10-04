@@ -184,13 +184,52 @@ button {
 @keyframes test-line {
   0% {
     transform: rotate(0deg);
-    background-color: yellow;
   }
   50% {
     transform: rotate(-180deg);
-    background-color: blue;
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+.card-slide {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes color-change {
+  0% {
+    --test-color: yellow;
+  }
+  50% {
+    --test-color: red;
+  }
+  100% {
+    --test-color: yellow;
   }
 }

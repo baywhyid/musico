@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="global.css">
         <title>musico free audio player</title>
+        <script src="test.js" defer></script>
     </head>
     <body>
         <div class="fixed-position">
@@ -230,6 +231,10 @@
 <div class="slide-animation-container">
     <div class="slide-animation">TEST SLIDEE</div>
 </div>
+<div class="card-slide">Card pertama</div>
+<div class="card-slide">Card kedua</div>
+<div class="card-slide">Card ketiga</div>
+
 <div class="mini-container grid-container-test">
     <div class="gridtest  item-grid">1</div>
     <div class="gridtest">2</div>
@@ -259,7 +264,7 @@
     <div class="grid-items">2</div>
     <div class="grid-items">3</div>
     <div class="grid-items">4</div>
-    <div class="grid-items">5</div>
+    <div class="grid-items"></div>
     <div class="grid-items">6</div>
     <div class="grid-items">7</div>
 </div>
@@ -269,11 +274,16 @@
     <p class="testselector">Paragraph2</p>
     <div class="testselector">Div1</div>
     <div class="testselector">Div2</div>
-    <p class="testselector">Paragraph3</p>
+    <p class="testselector">Paragr<br>aph3</p>
 </div>
 <div>
     <button class="test-hover-btn">HOVERME</button>
 </div>
+<div id="userId">XXX-XXX-XXX</div>
+<form class="test-pseudo">
+    <input type="text" class="slider-test" required>
+    <input type="submit" class="slider-submit" value="submit">
+</form>
 <div class="mini-container test-media-var">
     <div class="box-var"></div>
     <p>ini adalah contoh combo dari media query dan custom properto, dimana jika di perangkat dengan lebar kurang dari 768px maka box hanya 100px x 100px berwarna biru dan jika layar lebih dari 768px maka box akan jadi 150px x 150px dengan warna merah</p>
@@ -298,5 +308,6 @@
         <p>ini adalah contoh secction dengan target pseudo-class</p>
      </section>
     </section>
+    <script src="test.js"></script>
      </body>
 </html>

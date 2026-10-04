@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warna Lab | Generator Warna dan Uji CSS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN + warna kustom dari CSS variables. Perhatikan "accent" = --c, yaitu warna yang sedang kamu pilih -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: {
+      ink: 'var(--ink)', muted: 'var(--muted)', surface: 'var(--surface)',
+      line: 'var(--line)', accent: 'var(--c)'
+    } } } }
+  </script>
+  <link rel="stylesheet" href="style-test3.css">
+</head>
+
+<body>
+  <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <span class="text-lg font-extrabold tracking-tight">warna<span class="text-accent">.lab</span></span>
+    <div class="flex gap-2">
+      <button id="shuffle" class="btn rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white">Kejutkan saya</button>
+      <button id="themeBtn" class="btn rounded-full border border-line bg-surface px-4 py-2 text-sm font-semibold">Tema</button>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-6 pb-20">
+
+    <!-- Bagian atas: kiri = pratinjau + uji CSS + gradien, kanan = kontrol warna + kode -->
+    <section class="grid gap-6 lg:grid-cols-5">
+      <div class="space-y-4 lg:col-span-3">
+        <!-- Kotak ini yang diubah oleh textarea "Uji CSS" di bawahnya -->
+        <div id="stage" class="stage">
+          <div><p id="stageHex" class="text-5xl font-extrabold sm:text-6xl"></p><p id="stageRgb" class="mt-2 opacity-90"></p></div>
+        </div>
+
+        <div class="card p-5">
+          <label for="css" class="font-semibold">Uji CSS</label>
+          <p class="mb-3 text-sm text-muted">Tulis CSS untuk kotak di atas. Variabel yang tersedia: <code>var(--color)</code> dan <code>var(--gradient)</code>.</p>
+          <textarea id="css" rows="4" spellcheck="false" class="field code-font">background: var(--gradient);
+border-radius: 28px;
+box-shadow: 0 30px 60px -24px var(--color);</textarea>
+        </div>
+
+        <div class="card p-5">
+          <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <h2 class="font-semibold">Pembuat gradien</h2>
+            <select id="gType" class="field !w-auto !py-2 text-sm">
+              <option value="linear">Linear</option>
+              <option value="radial">Radial</option>
+              <option value="conic">Conic</option>
+            </select>
+          </div>
+          <label class="block">
+            <div class="mb-2 flex justify-between text-sm font-semibold"><span>Sudut</span><output id="angleOut">135°</output></div>
+            <input type="range" id="gAngle" min="0" max="360" value="135" style="--track: var(--line)">
+          </label>
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            <div id="stops" class="flex items-center gap-2"></div>
+            <button id="addStop" class="link-btn">Tambah warna ini</button>
+            <button id="resetStops" class="link-btn">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4 lg:col-span-2">
+        <div class="card p-5">
+          <div class="mb-5 flex items-center gap-3">
+            <input type="color" id="picker" class="picker" aria-label="Pilih warna">
+            <input id="hex" class="field code-font" maxlength="7" spellcheck="false" aria-label="Kode HEX" placeholder="#4f6bff">
+          </div>
+          <div id="sliders" class="space-y-4"></div>
+        </div>
+        <div class="card space-y-2 p-5">
+          <h2 class="mb-1 font-semibold">Kode siap salin</h2>
+          <div id="outputs" class="space-y-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rekomendasi 1: harmoni warna dari warna yang sedang dipilih -->
+    <section class="mt-20">
+      <h2 class="text-3xl font-extrabold">Harmoni dari warnamu</h2>
+      <p class="mt-1 text-muted">Dihitung otomatis dari hue warna yang dipilih. Klik warna untuk memakainya.</p>
+      <div id="harmony" class="mt-6 grid gap-6 md:grid-cols-2"></div>
+    </section>
+
+    <!-- Rekomendasi 2: palet pilihan -->
+    <section class="mt-20">
+      <h2 class="text-3xl font-extrabold">Palet pilihan</h2>
+      <p class="mt-1 text-muted">Kumpulan palet siap pakai. Klik "Pakai di gradien" untuk langsung mencobanya.</p>
+      <div id="presets" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script-test3.js"></script>
+</body>
+</html>

@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // === NAVIGASI HIGHLIGHT PAKAI KEYBOARD ===
   document.addEventListener('keydown', function(e) {
     if (!searchMarks.length) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {

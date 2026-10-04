@@ -1,0 +1,23 @@
+{
+  "name": "musico-yt-webview",
+  "version": "1.0.0",
+  "description": "Currently Learning responsive web design on freecodecamp.org.\r DOCUMENTAION AND LEARNING PROGRESS IN PROGRAMMING I SAVE HERE, STILL LEARNING AND TRUST THE PROCESES, SORRY FOR CAPSLOCK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baywhyid/musico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baywhyid/musico/issues"
+  },
+  "homepage": "https://github.com/baywhyid/musico#readme",
+  "dependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

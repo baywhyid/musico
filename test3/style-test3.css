@@ -1,0 +1,76 @@
+/* ===== 1. @property: membuat variabel CSS bisa dianimasikan =====
+   Karena --c didaftarkan sebagai <color>, perpindahan warnanya jadi halus. */
+@property --c { syntax: '<color>'; inherits: true; initial-value: #4f6bff; }
+
+:root {
+  --c: #4f6bff;
+  --bg: #f4f4f7; --surface: #fff; --ink: #15151c; --muted: #6a6a78; --line: #e3e3ea;
+  transition: --c .35s ease;
+}
+[data-theme="dark"] {
+  --bg: #0e0e13; --surface: #17171f; --ink: #f1f1f6; --muted: #9a9aad; --line: #2a2a36;
+}
+
+/* ===== 2. Dasar: latar ikut ter-tint oleh warna pilihan ===== */
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(52rem 26rem at 85% -8%, color-mix(in srgb, var(--c) 18%, transparent), transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+  transition: color .4s;
+}
+:focus-visible { outline: 3px solid var(--c); outline-offset: 2px; }
+.code-font, code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: .85rem; }
+code { background: color-mix(in srgb, var(--c) 14%, transparent); padding: .1rem .4rem; border-radius: .4rem; }
+
+/* ===== 3. Komponen ===== */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 1.25rem; transition: background .4s, border-color .4s; }
+.btn { transition: transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px var(--c); }
+.btn:active { transform: scale(.96); }
+.field { width: 100%; border: 1px solid var(--line); background: transparent; border-radius: .9rem; padding: .75rem 1rem; outline: none; resize: vertical; transition: border-color .2s; }
+.field:focus { border-color: var(--c); }
+.link-btn { font-size: .85rem; font-weight: 600; color: var(--c); }
+.link-btn:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ===== 4. Kotak pratinjau ===== */
+.stage {
+  height: 18rem; display: grid; place-items: center; text-align: center;
+  color: #fff; text-shadow: 0 2px 24px rgba(0, 0, 0, .35);
+  transition: border-radius .4s, box-shadow .4s;
+}
+
+/* ===== 5. Slider dengan track berwarna (nilai --track diatur JS) ===== */
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 10px; border-radius: 99px; background: var(--track); outline: none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); cursor: grab; transition: transform .2s; }
+input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); cursor: grab; }
+input[type=range]:hover::-webkit-slider-thumb { transform: scale(1.18); }
+input[type=range]:active::-webkit-slider-thumb { cursor: grabbing; }
+
+/* Pemilih warna bawaan browser */
+.picker { width: 3rem; height: 3rem; flex: none; padding: 0; border: 0; border-radius: .9rem; background: none; cursor: pointer; }
+.picker::-webkit-color-swatch-wrapper { padding: 0; }
+.picker::-webkit-color-swatch { border: 0; border-radius: .9rem; }
+.picker::-moz-color-swatch { border: 0; border-radius: .9rem; }
+
+/* ===== 6. Baris kode siap salin ===== */
+.out { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 1rem; padding: .7rem .9rem; text-align: left; border: 1px solid var(--line); border-radius: .8rem; transition: border-color .2s, transform .2s; }
+.out:hover { border-color: var(--c); transform: translateX(3px); }
+.out code { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: none; padding: 0; }
+
+/* ===== 7. Strip warna: swatch yang di-hover melebar (flex-grow) ===== */
+.strip { display: flex; height: 4.5rem; border-radius: 1rem; overflow: hidden; }
+.sw { flex: 1; font-size: .72rem; font-weight: 600; opacity: .95; transition: flex .45s cubic-bezier(.2, .7, .2, 1); }
+.sw:hover { flex: 2.4; }
+.sw { font-family: ui-monospace, Menlo, monospace; }
+.dot { width: 1.7rem; height: 1.7rem; border-radius: 50%; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line); transition: transform .2s; }
+button.dot:hover { transform: scale(1.2) rotate(8deg); }
+
+/* ===== 8. Toast ===== */
+.toast { position: fixed; left: 50%; bottom: 2rem; z-index: 50; transform: translate(-50%, 200%); background: var(--ink); color: var(--bg); padding: .7rem 1.2rem; border-radius: 99px; font-weight: 600; transition: transform .4s cubic-bezier(.34, 1.56, .64, 1); }
+.toast.show { transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

@@ -1478,3 +1478,34 @@ p.testselector {
   border-right: 5px solid transparent;
   border-top: 10px solid black;
 }
+.card-slide {
+  background-color: #4dabf7;
+  margin-top: 20px;
+  padding: 10px;
+  width: 300px;
+}
+body section:not(.container) {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.slider-test {
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+}
+.slider-test:required {
+  background-color: greenyellow;
+}
+.slider-test:focus-within {
+  transform: scale(1.4);
+}
+.grid-items:empty {
+  background-color: #2a5298;
+}
+.slider-submit {
+  appearance: none;
+}
+#userName {
+  display: none;
+}
