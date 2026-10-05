@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="global.css">
         <title>musico free audio player</title>
         <script src="test.js" defer></script>
+        <script src="test-dom.js" defer></script>
     </head>
     <body>
         <div class="fixed-position">
@@ -268,6 +269,18 @@
     <div class="grid-items">6</div>
     <div class="grid-items">7</div>
 </div>
+<div class="x-container">
+<div class="flex-x">
+    <div class="box-polos testbox7">1</div>
+    <div class="box-polos testbox7">2</div>
+    <div class="box-polos testbox7">3</div>
+    <div class="box-polos testbox7">4</div>
+    <div class="box-polos testbox7">5</div>
+    <div class="box-polos testbox7">6</div>
+    <div class="box-polos testbox7">7</div>
+    <div class="box-polos testbox7">8</div>
+</div>
+</div>
 <p class="fallback">ini adalah contoh fallback content di custom properties, saya menulis --fallback: balck di root supaya browser mengalihkan ke value kedua yaitu red, ini yang dinamakan fallback value, dimana jika value pertama tidak valid maka browser akan menggunakan value kedua</p>
 <div class="test-selector">
     <p class="testselector">Paragraph1</p>
@@ -278,6 +291,23 @@
 </div>
 <div>
     <button class="test-hover-btn">HOVERME</button>
+</div>
+<div class="mini-container">
+  <button id="prompt-btn">Show Prompt</button>
+  <p>Hallo, <span id="output">Anon!</span></p>
+
+  <input type="password" id="password-input" placeholder="Masukan Sandi">
+  <button id="pass-btn">Enter Password</button>
+  <dialog id="pass-dialog">
+    <p>BENERR, KOK TAUU?</p>
+    <button id="pass-close-btn">X</button>
+  </dialog>
+  <p id="pass-output"></p>
+  <button id="testBtn1" value="Nasi Lemak">A</button>
+  <button id="testBtn2" value="Mak Limah">B</button>
+  <button id="testBtn3" value="Biadap">C</button>
+  <button id="testBtn4">ALL</button>
+  <p id="testOutput"></p>
 </div>
 <div id="userId">XXX-XXX-XXX</div>
 <form class="test-pseudo">
@@ -308,6 +338,5 @@
         <p>ini adalah contoh secction dengan target pseudo-class</p>
      </section>
     </section>
-    <script src="test.js"></script>
      </body>
 </html>

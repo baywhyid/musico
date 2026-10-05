@@ -1521,3 +1521,39 @@ body section:not(.container, #flex-container) {
   letter-spacing: 1px;
   font-family: Raleway, sans-serif;
 }
+.x-container {
+  position: relative;
+  width: 800px;
+}
+.flex-x {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.flex-x::-webkit-scrollbar {
+  display: none;
+}
+.flex-x::scroll-button(left) {
+  content: "<";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+}
+.flex-x::scroll-button(right) {
+  content: ">";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+}
+.testbox7 {
+  width: 200px;
+  height: 200px;
+  background-color: #4dabf7;
+  border-radius: var(--length-medium);
+  position: relative;
+  flex: 0 0 13rem;
+  scroll-snap-align: center;
+}

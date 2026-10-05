@@ -66,6 +66,9 @@
   --height-box: 100px;
   --padding-box: 15px;
  }
+ .x-container  {
+  width: 90vw;
+ }
 }
 /* untuk responsive desktop*/
 @media (min-width: 769px) {

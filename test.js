@@ -52,8 +52,8 @@ if (x >= 20) {
 else {
     console.log("x lebih kecil dari 20");
 }
-
-let userName = document.getElementById("userId");
+//tampilkan html element di console
+const userName = document.getElementById("userId");
 console.log(userName.textContent);
 
 let textTest = "Hello";
@@ -97,4 +97,6 @@ console.log(pesan2);
 
 //indexOf method
 let index = pesan.indexOf("my name");
+let falseIndex = pesan.indexOf("not found");
 console.log(index);
+console.log(falseIndex);
