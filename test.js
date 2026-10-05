@@ -94,3 +94,7 @@ console.log(pesan);
 let pesan2 = `ini pesan multi line
 yang dibuat pakai template literal.`;
 console.log(pesan2);
+
+//indexOf method
+let index = pesan.indexOf("my name");
+console.log(index);

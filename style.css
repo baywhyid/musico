@@ -304,6 +304,7 @@ button {
   font-size: 1.1rem;
   line-height: 1.5em;
   letter-spacing: 0.5px;
+  border-bottom: 1px solid #444;
 }
 .lab-nav {
   width: calc(50% - 10px);
@@ -317,12 +318,11 @@ button {
 .hiasan-aja {
   display: block;
   font-family: sora;
-  color: whitesmoke;
-  background-color: steelblue;
-  padding: 5px;
-  width: fit-content;
-  border: 2px solid black;
-  margin-left: 2vw;
+  color: orange;
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 0;
+  letter-spacing: 1px;
 }
 .test-pre {
   white-space: pre-wrap;
@@ -511,15 +511,20 @@ input[type="email"] {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+#flex-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
 .article-main {
   background-color: hsla(0, 0%, 20%, 1);
-  border-radius: 10px;
-  border: 2px solid #333;
+  border-radius: var(--length-medium);
+  border: 1px solid #333;
   padding: 20px 0 20px 0;
   overflow-wrap: break-word;
-  max-width: 1200px;
-  margin: auto;
-  text-align: justify;
+  width: clamp(300px, 90%, 1000px);
+  text-align: center
 }
 .article-footer {
   margin-top: 50px;
@@ -1484,7 +1489,7 @@ p.testselector {
   padding: 10px;
   width: 300px;
 }
-body section:not(.container) {
+body section:not(.container, #flex-container) {
   animation: reveal linear both;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
@@ -1508,4 +1513,11 @@ body section:not(.container) {
 }
 #userName {
   display: none;
+}
+.article-content>h3 {
+  text-align: center;
+  color: orangered;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: Raleway, sans-serif;
 }

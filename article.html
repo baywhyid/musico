@@ -30,13 +30,20 @@
         <p><a href="index.html">home</a>/<span>article</span></p>
         </section>
         </div>
+        <div class="nav-container">
+            <a href="#html-section">HTML</a>
+            <a href="#css-section">CSS</a>
+            <a href="#javascript-section">JavaScript</a>
+        </div>
         <hr>
+        <section id="flex-container">
         <main class="article-main">
-            <h2 class="hiasan-aja">HTML, <span class="css-text">CSS Syntax</span></h2>
+            <h2 class="hiasan-aja">HTML, <span class="css-text">CSS, JS</span></h2>
            <article id="article-content" class="article-content">
             <p class="article-paragraph">Dibawah ini adalah sedikit catatan yang saya pelajari tentang pemrograman web</p>
             <p>Horizontal/X berarti dari kiri ke kanan atau sebaliknya atau menyamping (--- ), sedangkan vertical/Y berarti dari atas ke bawah atau sebaliknya (|)</p>
             <p>fallback adalah kondisi dimana jika value/sesuatu yang pertama tidak valid, maka akan diarahkan ke value kedua, dan jika kedua juga invalid maka akan ke tiga dan seterusnya</p>
+            <h3 id="html-section">HTML Section</h3>
             <p>&lt;abbr&gt untuk singkatan</p>
              <p>&lt;address&gt untuk informasi kontak</p>
              <p>&lt;area&gt untuk area pada image map</p>
@@ -98,6 +105,7 @@
 <p>accesskey untuk memberikan shortcut keyboard pada elemen, contoh: &lt;button accesskey="s"&gt;Save&lt;/button&gt; maka pengguna bisa tekan Alt + S untuk klik tombol Save</p>
 <p>selector CSS diawali dengan #&lt;tagar&gt; untuk id, titik &lt;.&gt; untuk class, dan nama tag untuk langsung elemnt, minusnya semua tag akan terpengaruh</p>
 <p>user-scalable=no untuk menonaktifkan zoom pada perangkat mobile, contoh: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;</p>
+<h3 id="css-section">CSS Section</h3>
 <p>width dan height untuk memanjangkan atau memendekan ukuran elemen, min-width dan max-width untuk menentukan ukuran minimum dan maksimum elemen</p>
 <p>method untuk &lt;form&gt; ada get untuk mengirimkan data melalui URL, post untuk mengirimkan data melalui body, put untuk mengganti data yang sudah ada, delete untuk menghapus data, dan patch untuk memperbarui sebagian data. contoh: &lt;form method="post" action="submit.php"&gt;</p>
 <p>border untuk border di css</p>
@@ -377,6 +385,7 @@ border-color: blue red green black;</code></p>
 <p>css selector tanpa spasi seperti .selector1.selector2 akan memilih elemen yg memiliki kedua class tersebut, tanpa spasi berarti AND</p>
 <p>:any-link adalah kombinasi dari :link dan :visited</p>
 <p>:empty psudo class digunakan untuk styling block element tanpa isi atau kosong</p>
+<h3 id="javascript-section">JavaScript Section</h3>
 <p>data type string wajib pakai '' atau ""</p>
 <p>data type di-javascript terdiri dari number yang bisa berisi angka, string yang berisi text atau kalimat yg diapit oleh quote atau doble-quote</p>
 <p>string adalah tipe data yang digunakan untuk menyimpan teks atau nilai karakter, diapit oleh tanda kutip tunggal atau ganda</p>
@@ -404,8 +413,12 @@ border-color: blue red green black;</code></p>
 <p>string interpolation adalah fitur dimana kita menyematkan variable atau kode di dalam string seperti untuk menyambungkan kata dari variable lain</p>
 <p>untuk memasukan kode di template literals, gunakan ${variable}</p>
 <p>template literal juga mendukung multi-line strings, dimana di string biasa membutuhkan \n dan di template literals kita bisa menggunakan baris baru langsung dan formatnya tetap sama</p>
+<p>Substring adalah bagian dari sebuah string yang terdiri dari karakter-karakter yang berurutan dan berdempetan tanpa ada karakter yang dilewati.</p>
+<p>indexof method digunakan untuk mencari posisi pertama kemunculan sebuah substring dalam string. Jika substring ditemukan, method ini akan mengembalikan indeksnya; jika tidak ditemukan, maka return -1.</p>
+<p>indexof memiliki dua argumen: argumen pertama adalah substring yang ingin dicari, dan argumen kedua adalah posisi mulai pencarian (opsional).</p>
             </article>
         </main>
+        </section>
         <footer class="article-footer">
             <p>Copyright © 2026 Musico. All rights reserved.</p>
         </footer>
