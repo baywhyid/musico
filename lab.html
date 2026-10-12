@@ -303,17 +303,55 @@
     <button id="pass-close-btn">X</button>
   </dialog>
   <p id="pass-output"></p>
-  <button id="testBtn1" value="Nasi Lemak">A</button>
-  <button id="testBtn2" value="Mak Limah">B</button>
-  <button id="testBtn3" value="Biadap">C</button>
-  <button id="testBtn4">ALL</button>
+  <button id="testBtn1" class="btnJs" value="Nasi Lemak">A</button>
+  <button id="testBtn2" class="btnJs" value="Mak Limah">B</button>
+  <button id="testBtn3" class="btnJs" value="Biadap">C</button>
+  <button id="testBtn4" class="btnJs">ALL</button>
+  <button id="testBtn5">RESET</button>
   <p id="testOutput"></p>
+  <button id="testBtn6">Open</button>
+  <dialog id="testDialog1">
+    <p>ini adalah contoh dialog</p>
+    <button id="closeDialogBtn1">Close</button>
+  </dialog>
+  <br>
+  <input type="text" id="input-include">
+  <button id="restrcitedBtn">X</button>
+  <p id="outputIncl"></p>
+  <button id="totalClick">KLIK</button>
+  <button id="decrClick">-1</button>
+  <button id="incrReset">ReSet</button>
+  <p id="totalClickOutput"></p>
 </div>
 <div id="userId">XXX-XXX-XXX</div>
 <form class="test-pseudo">
     <input type="text" class="slider-test" required>
     <input type="submit" class="slider-submit" value="submit">
 </form>
+<details class="faq-box">
+  <summary class="faq-title">
+    Can animals understand human emotions?
+  </summary>
+  <p class="faq-content">
+    Some animals, especially dogs and cats, can recognize human emotions through facial expressions, body language, and tone of voice.
+  </p>
+</details>
+<details class="faq-box">
+  <summary class="faq-title">
+    Why is sleep important?
+  </summary>
+  <p class="faq-content">
+    Sleep helps your body recover, improves memory, and keeps your mind focused throughout the day.
+  </p>
+</details>
+<details class="faq-box">
+  <summary class="faq-title">
+    What makes a good friendship?
+  </summary>
+  <p class="faq-content">
+    A good friendship is built on trust, honesty, mutual respect, and supporting each other through good and bad times.
+  </p>
+</details>
 <div class="mini-container test-media-var">
     <div class="box-var"></div>
     <p>ini adalah contoh combo dari media query dan custom properto, dimana jika di perangkat dengan lebar kurang dari 768px maka box hanya 100px x 100px berwarna biru dan jika layar lebih dari 768px maka box akan jadi 150px x 150px dengan warna merah</p>
@@ -337,6 +375,7 @@
         <h2>TEST SECTION</h2>
         <p>ini adalah contoh secction dengan target pseudo-class</p>
      </section>
+     
     </section>
      </body>
 </html>

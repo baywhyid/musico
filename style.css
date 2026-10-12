@@ -1532,6 +1532,7 @@ body section:not(.container, #flex-container) {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  border: 1px solid #f5f6f7;
 }
 .flex-x::-webkit-scrollbar {
   display: none;
@@ -1556,4 +1557,22 @@ body section:not(.container, #flex-container) {
   position: relative;
   flex: 0 0 13rem;
   scroll-snap-align: center;
+}
+#testBtn5 {
+  display: none;
+}
+.faq-box::details-content {
+  overflow: clip;
+  height: 0;
+  transition: 200ms height ease, content-visibility 100ms allow-discrete;
+}
+.faq-box[open]::details-content {
+  height: auto;
+}
+.faq-box {
+  margin-bottom: var(--length-medium);
+  border: 1px solid white;
+  width: 300px;
+  padding: 10px;
+  interpolate-size: allow-keywords;
 }

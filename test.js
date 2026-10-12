@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { JSDOM } = require("jsdom");
+const { type } = require("os");
 
 const html = fs.readFileSync("lab.html", "utf8");
 
@@ -56,6 +57,7 @@ else {
 const userName = document.getElementById("userId");
 console.log(userName.textContent);
 
+//console log
 let textTest = "Hello";
 textTest += ", World!";
 console.log(textTest);
@@ -74,6 +76,7 @@ console.log(typeof testVar2);
 console.log(typeof testVar);
 console.log(typeof testBool);
 console.log(typeof testKosong);
+console.log(greeting.charCodeAt(1), "ASCII Number");
 
 //bracket notation
 let testText2 = "Hello";
@@ -100,3 +103,45 @@ let index = pesan.indexOf("my name");
 let falseIndex = pesan.indexOf("not found");
 console.log(index);
 console.log(falseIndex);
+
+//includes 
+console.log(pesan2.includes("Multi"));/*disini berniat mengambil value multi dari var pesan2, hanya saja karena includes method sensitive trhdp kapital dia akan mengeluarkan return false*/
+
+//slice method
+console.log(pesan2.slice(5, 8));
+
+//codeAt
+console.log(String.fromCharCode(65));
+console.log(pesan2.charCodeAt("A"));
+
+//replace method
+const tsText = "I Love Javascript";
+const tsText1 = tsText.replace("Javascript", "Coding");
+console.log(tsText1)
+
+//type coercion 
+let tCoer1 = '20' + 5;
+let tCoer2 = 10 * '2';
+let tCoer3 = 'abc' / 2;
+let tCoer4 = true + 2;
+let tCoer5 = false + 3;
+
+console.log(tCoer1, typeof tCoer1);
+console.log(tCoer2, typeof tCoer2);
+console.log(tCoer3, typeof tCoer3);
+
+//aritmethic presedence
+const aritmethic = 5 + 5 * 5;
+const aritmethic1 = (5 + 5) * 5; //dgn parenthess 5 + 5 akan dihitung terlebih dahulu
+
+console.log(aritmethic, "5 * 5 + 5 = 30");
+console.log(aritmethic1, "5 + 5 * 5 = 50");
+
+//increment & decrement
+let incr = 0;
+console.log(incr++, "incr1");
+console.log(incr, "incr1");
+
+let incr2 = 0;
+console.log(++incr2, "incr2");
+console.log(incr2, "incr2");

@@ -67,7 +67,8 @@
   --padding-box: 15px;
  }
  .x-container  {
-  width: 90vw;
+  width: calc(100vw - 30px);
+  margin: 0 auto;
  }
 }
 /* untuk responsive desktop*/
