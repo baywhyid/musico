@@ -117,7 +117,7 @@ const incrReset = document.getElementById("incrReset");
 let clickIncr = 0;
 
 incrButton.addEventListener("click", () => {
-  clickIncr++;
+  clickIncr++; //clickIncr = clickIncr + 1;
   incrOutput.textContent = clickIncr;
 
   if (clickIncr === 100) {
@@ -128,7 +128,7 @@ incrButton.addEventListener("click", () => {
 
 decrBtn.addEventListener("click", () => {
   if(clickIncr > 0) {
-    clickIncr--
+    clickIncr--; //clickIncr = clickIncr - 1;
     incrOutput.textContent = clickIncr;
   }
 })
@@ -141,4 +141,41 @@ incrReset.addEventListener("click", () => {
     clickIncr = 0;
     incrOutput.textContent = clickIncr;
   }
+})
+
+//testt if modal
+const ifModal = document.getElementById("modalInputIft");
+const ifDialog = document.getElementById("modalDialogIft");
+const ifClose = document.getElementById("ifClose");
+const ifSubmit = document.getElementById("ifSubmit");
+const ifOutput = document.getElementById("ifModaSlOut1");
+const ifOutput2 = document.getElementById("ifModalOut2");
+const ifInput1 = document.getElementById("ifInput1");
+const ifInput2 = document.getElementById("ifInput2")
+const ifDialog2 = document.getElementById("modalDialogIft2");
+const ifOutput3 = document.getElementById("ifModalOut3")
+
+ifModal.addEventListener("click", () => {
+  ifDialog.showModal()
+})
+
+ifClose.addEventListener("click", () => {
+  ifDialog.close()
+})
+
+ifSubmit.addEventListener("click", () => {
+  const age = Number(ifInput2.value);
+  const name = ifInput1.value;
+ if (age >= 18) {
+   ifOutput.textContent = `Halo ${name} kamu eligible`;
+   ifInput1.disabled = true;
+   ifInput2.disabled = true;
+ }
+ else {
+  ifOutput.textContent = `Hai ${name}, Kamu tidak memenuhi syarat`;
+  ifDialog.close();
+  ifDialog2.showModal()
+ }
+ const userAge = age < 15 ? `Bocil` : ``;
+ ifOutput3.textContent = `Minggir kamu ${userAge}`;
 })

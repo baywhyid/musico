@@ -1576,3 +1576,7 @@ body section:not(.container, #flex-container) {
   padding: 10px;
   interpolate-size: allow-keywords;
 }
+.text-underline {
+  border-bottom: 1px solid white;
+  background-color: green;
+}

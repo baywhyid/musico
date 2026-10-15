@@ -438,6 +438,24 @@ border-color: blue red green black;</code></p>
 <p>bedanya prefix dan postfix di increment ++ dan decrement -- adalah prefix langsung menambahkan value baru dan postfix akan merujuk ke value awal dlu sebelum menambah 1</p>
 <p>compound assignment adalah sebuah shortcut dari operasi aritmetika di js, contoh x += 1 setara dengan x = x + 1.</p>
 <p>compound assignment bisa berupa perkalian =*, pengurangan -=, pembagian /=, pangkat **=, remainder %= dan penambahan +=</p>
+<p>equality operator (==) untuk membandingkan apakah sebuah value memiliki kesamaan atau tidak, js akan mengonversi (type coercion) tipe data secara otomatis, jadi 7 == "7" hasilnya true</p>
+<p>strict equality operator (===) persis seperti equality, hanya saja type data dari nilai nya harus sama, jadi 7 === "7" akan dianggap beda/false, karena keduany adalah number dan string type</p>
+<p>jika equality digunakan untuk membandingkan 2 hal yg setara, maka inequality (!=) kebalikannya. 7 != "7" akan false, karena keduanya sama, inequality mencari value yg berbeda</p>
+<p>strict inequality operator !== akan menghasilkan value true kepada 7 !== "7", keduanya dianggap berbeda karena type data keduanya berupa number dan string </p>
+<p>comparison operator atau operator perbandingan terdiri dari lebih besar &gt;, lebih besar atau sama-dengan &gt;=, lebih kecil &lt; dan lebih kecil atau sama-dengan &lt;=. digunakan untuk condition, hasilnya akan selalu true or false</p>
+<p>truthy adalah sebuah kategori dimana konteks di-evaluasi menjadi true dalam konteks boolean, contoh truthy value seperti string yang tidak kosong, angka bukan 0, boolean true dan lainnya lagi</p>
+<p>falsy value adalah kategori yg di-evaluasi false dalam boolean, contoh angka 0, false, string kosong, NaN, null, undifined dan lainnya</p>
+<p>unary + operator untuk ubah string jadi number</p>
+<p>unary - opeartor ubah number menjadi negative</p>
+<p>unary NOT logical opeartor ! membalikan value boolean, true jadi false dan false jadi true</p>
+<p>bitwise unary ~ adalah untuk membalikan kode binari dari 1 ke 0 atau sebaliknya</p>
+<p>Bitwise AND (&) membandingkan bit binary pada posisi yang sama. Hasilnya akan 1 hanya jika kedua bit tersebut bernilai 1. Contoh: 10 (1010) & 6 (0110) menghasilkan 0010 (2).</p>
+<p>Bitwise OR (|) akan menghasilkan bit 1 jika salah satu atau kedua bit bernilai 1. Contoh, 1001 | 0110 menghasilkan 1111, sedangkan 0110 | 1110 menghasilkan 1110.</p>
+<p>Bitwise XOR (^) akan menghasilkan bit 1 jika kedua bit memiliki nilai yang berbeda, dan menghasilkan 0 jika keduanya memiliki nilai yang sama. Contoh, 1010 ^ 0110 akan menghasilkan 1100.</p>
+<p>Bitwise NOT (~) akan membalik setiap bit binary, yaitu 0 menjadi 1 dan 1 menjadi 0. Contoh, 1010 akan menjadi 0101 setelah bit-nya dibalik.</p>
+<p>Bitwise left shift (&lt;&lt;) akan menggeser bit binary ke kiri sebanyak posisi yang ditentukan. Contoh, 0101 &lt;&lt; 1 akan menghasilkan 1010.</p>
+<p>Bitwise right shift (&gt;&gt;) akan menggeser bit binary ke kanan sebanyak posisi yang ditentukan. Contoh, 0101 &gt;&gt; 1 akan menghasilkan 0010.</p>
+<P>ternary operator adalah cara singkat menggunakan if/else dengan syntax <span class="text-underline">kondisi ? nilaiJikaTrue : nilaiJikaFalse</span></P>
             </article>
         </main>
         </section>

@@ -145,3 +145,24 @@ console.log(incr, "incr1");
 let incr2 = 0;
 console.log(++incr2, "incr2");
 console.log(incr2, "incr2");
+
+//equality & inequality operator
+
+console.log(5 == "5", "equality operator"); //true karena otomatis js konversi string "5" ke number
+console.log(5 === "5", "strict equality operator"); //tipe data keduanya harus sama, jadi false
+console.log(5 != "5", "inequality operator"); //false, keduanya dianggap sama
+console.log(5 !== "5", "strict inequality operator"); //true, karena di strict dia membedakan tipe data
+
+//comparison operator
+console.log(5 > 5, "false");
+console.log(5 >= 5, ), "true";
+console.log(5 < 5, "false");
+console.log(5 <= 5, "true");
+
+//unary operator
+let xxx = '5';
+console.log(typeof +xxx, xxx); //mengubah type data string ke number
+console.log(-xxx, typeof +xxx); //mengubah 5 menjadi negatif dan ubah string ke number
+
+let xxx1 = true; //membalikan value boolean
+console.log(!xxx1);
